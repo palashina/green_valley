@@ -3,9 +3,9 @@
 	@media (min-width: 320px) and (max-width: 500px) {
 		h1, h2, p {
 		width: 260px;
-	    }
+	}
 
-			&__type {
+		&__type {
 			text-align: center;
 			color: #1c1c1c;
 			line-height: 26px;
@@ -30,7 +30,7 @@
 			margin-bottom: 20px;
 		}
 
-		&__type-item p {
+		p {
 			font-size: 16px;
 		}
 
@@ -51,48 +51,44 @@
 
 	&__tabs {
 		text-align: center;
+	}
 
-		&__tab-item--active {
+	&__tab-item {
+		display: inline-block;
+		list-style-type: none;
+	}
+
+	&__tab-item--active {
 			color: #838383;
-		}
-
-		li {
-			display: inline-block;
-			list-style-type: none;
-		}
-
-		a {
-			text-decoration: none;
-			color: #838383;
-		}
-
-		a:hover {
-			color: #ff7435;
-		}
 	}
 
-	&__type {
-
-		&__type-item {
-
-			&__type-inner {
-
-				&__type-headline {}
-
-			}
-		}
+	&__tab-item-link {
+		text-decoration: none;
+		color: #838383;
 	}
 
-	&__options {
-
-		&__options-item {
-
-			&__options-headline {}
-			&__options-list {
-
-				&__option-pict {}
-				&__option-text {}
-			}
-		}
+	&__tab-item-link:hover {
+		text-decoration: none;
+		color: #ff7435;
 	}
+
+	&__type {}
+
+	&__type-item {}
+
+	&__type-inner {}
+
+	&__type-headline {}
+
+
+	&__options {}
+
+	&__options-item {}
+
+	&__options-headline {}
+	&__options-list {}
+
+	&__option-pict {}
+	&__option-text {}
+
 }

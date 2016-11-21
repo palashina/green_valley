@@ -2,13 +2,10 @@
 	position: relative;
 
 	@media (min-width: 320px) and (max-width: 500px) {
-		h1, h2, p {
-		width: 260px;
-	}
 
 		&__type {
 			text-align: center;
-			color: #1c1c1c;
+			color: @grey-darken;
 			line-height: 26px;
 		}
 
@@ -21,14 +18,14 @@
 		}
 
 		&__type-inner {
-			padding-top: 10px;
 			padding-bottom: 5px;
-			background-color: #fff;
+			background-color: @white;
 		}
 
 		&__type-headline {
 			font-size: 18px;
 			margin-bottom: 20px;
+			letter-spacing: 1px;
 		}
 
 		p {
@@ -42,7 +39,7 @@
 			text-align: center;
 			padding-top: 50px;
 			padding-bottom: 50px;
-			color: #000;
+			color: @black;
 		}
 
 		&__options-list {
@@ -62,17 +59,18 @@
 	}
 
 	&__tab-item--active {
-			color: #838383;
+			color: @orange-lighten;
 	}
 
 	&__tab-item-link {
 		text-decoration: none;
-		color: #838383;
+		color: @grey-main;
 	}
 
 	&__tab-item-link:hover {
 		text-decoration: none;
-		color: #ff7435;
+		color: @orange-lighten;
+		transition-duration: 0.5s;
 	}
 
 	&__type {}

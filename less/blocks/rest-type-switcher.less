@@ -6,7 +6,7 @@
 		&__type {
 			text-align: center;
 			color: @grey-darken;
-			line-height: 26px;
+			line-height: 1.625rem;
 		}
 
 		&__type-item {
@@ -23,13 +23,15 @@
 		}
 
 		&__type-headline {
-			font-size: 18px;
 			margin-bottom: 20px;
+			font-size: 1.125rem;
+			font-weight: normal;
 			letter-spacing: 1px;
 		}
 
 		p {
-			font-size: 16px;
+			font-size: @font-size;
+			line-height: 1.5rem;
 		}
 
 		&__options-item {
@@ -49,8 +51,9 @@
 
 	&__tabs {
 		position: absolute;
-		top: 540px;
-		text-align: center;
+		top: 480px;
+		left: 50%;
+		margin-left: -155px;
 	}
 
 	&__tab-item {
@@ -64,6 +67,8 @@
 
 	&__tab-item-link {
 		text-decoration: none;
+		font-size: 0.875rem;
+		line-height: 4.5rem;
 		color: @grey-main;
 	}
 
@@ -86,7 +91,11 @@
 
 	&__options-item {}
 
-	&__options-headline {}
+	&__options-headline {
+		font-size: 1.625rem;
+		letter-spacing: 2px;
+		font-weight: normal;
+	}
 	&__options-list {}
 
 	&__option-pict {}

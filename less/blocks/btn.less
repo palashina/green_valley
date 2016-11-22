@@ -10,15 +10,29 @@
 		width: 148px;
 		background-color: @green-main;
 		color: @white;
-		font-size: 0.875rem;
+		font-size: @font-size--small;
 		padding: 13px 30px;
 		letter-spacing: 1px;
-		border: 2px solid #fff;
+		border: 2px solid @white;
 	}
 
 	&--bg-blue:hover {
-		background-color: #fff;
+		background-color: @white;
 		color: #0ab89d;
+		transition-duration: 0.25s;
+	}
+
+	&--bg-orange {
+		width: 148px;
+		padding: 13px 30px;
+		background-color: @orange-lighten;
+		color: @white;
+		font-size: @font-size--small;
+		letter-spacing: 1px;
+	}
+
+	&--bg-orange:hover {
+		background-color: @orange-main;
 		transition-duration: 0.25s;
 	}
 }

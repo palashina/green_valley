@@ -1,7 +1,7 @@
 .reviews {
-	    background-image: url(/img/reviews-image.jpg);
-		background-size: cover;
-		background-repeat: no-repeat;
+	background-image: url(/img/reviews-image.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	@media (min-width: 320px) and (max-width: 500px) {
 		margin-top: 50px;
@@ -21,7 +21,8 @@
 
 	&__headline {
 		text-align: center;
-		font-size: 26px;
+		font-size: 1.625rem;
+		font-weight: normal;
 		letter-spacing: 2px;
 		color: @white;
 	}
@@ -50,23 +51,29 @@
 	}
 
 	&__name {
-		font-size: 14px;
+		font-size: @font-size--small;
 		color: @black;
 		font-style: normal;
 		font-weight: bold;
+		line-height: 1.125rem;
+		letter-spacing: 1px;
 	}
 
 	&__text {
 		margin-top: 40px;
-		font-size: 16px;
+		font-size: 0.875rem;
+		line-height: 1.375rem;
+
 	}
 
 	&__rest-date {
-		font-size: 14px;
+		font-size: @font-size--small;
+		line-height: 1.125rem;
 	}
 
 	&__rest-term {
-		font-size: 14px;
+		font-size: @font-size--small;
+		line-height: 1.125rem;
 	}
 
 	&__rest-term-from {

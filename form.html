@@ -3,17 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&amp;subset=cyrillic" rel="stylesheet">
 	<title>Green Valley &#8211; Бронирование</title>
 </head>
 <body>
 <!-- PAGE-HEADER -->
 <header class="page-header">
 	<div class="page-header__inner">
-		<a href="#" class="main-logo"><img src="" alt="green-valley_logo"></a>
+		<a href="#" class="main-logo"><img src="img/logo-green_valley.jpg" alt="green-valley_logo"></a>
 		<div class="main-nav">
 			<nav class="main-nav__nav">
 				<ul class="main-nav__list">
-					<li class="main-nav__item main-nav__item main-nav__item--active"><a href="rooms.html">номера</a></li>
+					<li class="main-nav__item  main-nav__item main-nav__item--active"><a href="rooms.html">номера</a></li>
 					<li class="main-nav__item"><a class="main-nav__link" href="">коттедж</a></li>
 					<li class="main-nav__item"><a class="main-nav__link" href="">ресторан</a></li>
 					<li class="main-nav__item"><a class="main-nav__link" href="">отдых</a></li>
@@ -33,7 +36,7 @@
 <!-- BOOKING-PROMO-->
 <div class="booking-promo">
     <h3 class="booking-promo__headline">Бронирование</h3>
-    <p>Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <a href="tel:+78120000000" class="page-header__phone-link">+7 812 777-55-88</a></p>
+    <p class="booking-promo__about">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <a href="tel:+78120000000" class="booking-promo__phone-link">+7 812 777-55-88</a></p>
 </div>
 <!-- /BOOKING-PROMO-->
 <!-- BOOKING-FORM -->
@@ -41,7 +44,7 @@
    <div class="booking-form__inner">
 <!-- STEP-ONE -->
 	<div class="booking-form__step">
-		<legend>Шаг 1</legend>
+		<legend class="booking-form__step-title">Шаг 1</legend>
 		<h2 class="booking-form__title">Дата отдыха</h2>
 		<div class="booking-form__calendar">
 			<label for="entry-date" class="booking-form__date">Дата въезда<input id="entry-date" type="date" name="calendar"></label>
@@ -51,7 +54,7 @@
 <!-- /STEP-ONE -->
 <!-- STEP-TWO -->
 	<div class="booking-form__step">
-		<legend>Шаг 2</legend>
+		<legend class="booking-form__step-title">Шаг 2</legend>
 		<h2 class="booking-form__title">Место проживания</h2>
 		<div class="booking-form__place-type"><input name="place-type" type="radio" value="hotel" checked>Отель</div>
 		<div class="booking-form__place-type"><input name="place-type" type="radio" value="cottage">Коттедж</div>
@@ -59,7 +62,7 @@
 <!-- /STEP-TWO -->
 <!-- STEP-THREE -->
 	<div class="booking-form__step">
-		<legend>Шаг 3</legend>
+		<legend class="booking-form__step-title">Шаг 3</legend>
 		<h2 class="booking-form__title">Тип коттеджа</h2>
 <!-- внимание: при такой разметке мы не сможем группировать label в один блок, а это, возможно, будет нужно для сетки bootstrap.. и нужно пояснение...-->
 		<label class="booking-form__cottage-type  booking-form__cottage-type--active"><input name="cottage-type" type="radio" value="flagman" checked>флагман</label>
@@ -106,7 +109,7 @@
 <!-- /STEP-THREE -->
 <!-- STEP-FOUR -->
 	<div class="booking-form__step">
-		<legend>Шаг 4</legend>
+		<legend class="booking-form__step-title">Шаг 4</legend>
 		<h2 class="booking-form__title">Персональная информация</h2>
 		<div class="booking-form__person-info">
 			<label for="person-info-name" class="booking-form__person-info-name">
@@ -128,7 +131,7 @@
 <!-- /STEP-FOUR -->
 <!-- STEP-FIVE -->
 	<div class="booking-form__step">
-		<legend>Шаг 5</legend>
+		<legend class="booking-form__step-title">Шаг 5</legend>
 		<h2 class="booking-form__title">Способ оплаты</h2>
 		<div class="booking-form__payment">
 			<div class="booking-form__payment"><input name="payment-type" type="radio" value="arrival" checked>По приезду</div>

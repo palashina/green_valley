@@ -1,0 +1,32 @@
+.rooms-promo {
+	// background-image: url(../img/rooms-promo.jpg);
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	// padding-top: 67px;
+	// padding-bottom: 70px;
+
+	&__headline {
+		text-align: center;
+		font-size: @font-size--biggest;
+		line-height: 2.625rem;
+		font-weight: normal;
+		letter-spacing: 2px;
+		color: @white;
+	}
+
+	@media (min-width: 320px) and (max-width: 500px) {
+		background-image: url(../img/rooms-promo-sm.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-top: 67px;
+		padding-bottom: 65px;
+
+		&__description {
+			display: none;
+		}
+
+		&__numerals {
+			display: none;
+		}
+	}
+}

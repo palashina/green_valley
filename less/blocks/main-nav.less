@@ -1,16 +1,41 @@
 .main-nav {
 
-	@media (min-width: 320px) and (max-width: 500px) {
+	@media (min-width: 320px) and (max-width: 768px) 	{
 		display: none;
 	}
 
-	&__nav {
+	@media (min-width: 1024px) {
+		&__nav {
+		font-size: @font-size--small;
+		line-height: 3.125rem;
+	    }
 
-		&__list {
+	    &__list {
+		    display: flex;
+		    flex-direction: row;
+	    }
 
-			&__item {}
-		}
+	    &__item {
+		    margin-right: 20px;
+		    list-style-type: none;
+	    }
+
+	    &__item:last-child {
+		    margin-right: 0;
+	    }
+
+	    &__link {
+		    text-decoration: none;
+		    color: @grey-darkest;
+		    text-transform: uppercase;
+	    }
+
+	    &__link:hover {
+		    color: @orange-main;
+	    }
+
+	    &__toggler {}
 	}
 
-	&__toggler {}
+
 }

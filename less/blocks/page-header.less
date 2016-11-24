@@ -1,8 +1,8 @@
 .page-header {
   color: @grey-darkest;
 
-  @media (min-width: 320px) and (max-width: 500px) {
-  	.main-logo{
+  @media (min-width: 320px) and (max-width: 768px) {
+  	.main-logo {
   		display: block;
   		text-align: center;
   		margin-top: 15px;
@@ -16,7 +16,22 @@
   	&__inner .btn {
   		display: none;
   	}
+  }
 
-  @media (min-width: 768px) {}
+  @media (min-width: 1024px) {
+    &__phone-link {
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: @grey-darkest;
+  }
+
+    &__address {
+      font-size: @font-size--small;
+      letter-spacing: 1px;
+      line-height: 1.125rem;
+      color: @grey-darken;
+    }
   }
 }

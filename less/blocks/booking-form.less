@@ -3,7 +3,9 @@
 	@media (min-width: 320px) and (max-width: 500px) {
 
 		&__step-title {
+			margin: auto;
 			font-size: 0.875rem;
+			text-transform: uppercase;
 			color: @grey-main;
 		}
 
@@ -15,17 +17,32 @@
 			letter-spacing: 1px;
 			color: @grey-darkest;
 		}
+
+		&__inner {}
+
+	    &__step {}
+
+	    &__step-title {}
+
+	    &__title
+
+	    &__calendar {}
+
+	    &__date {
+		    display: block;
+		    text-align: center;
+		    font-size: @font-size--small;
+		    text-transform: uppercase;
+		    line-height: 1.125rem;
+		    color: #575757;
+	    }
+
+	    &__date input {
+		    display: block;
+		    margin: auto;
+		    padding: 20px 19px;
+	    }
 	}
 
-	&__inner {}
 
-	&__step {}
-
-	&__step-title {}
-
-	&__title
-
-	&__calendar {}
-
-	&__date {}
 }

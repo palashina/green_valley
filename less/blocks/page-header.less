@@ -1,24 +1,49 @@
 .page-header {
   color: @grey-darkest;
 
-  @media (min-width: 320px) and (max-width: 768px) {
-  	.main-logo {
-  		display: block;
-  		text-align: center;
-  		margin-top: 15px;
-  		margin-bottom: 25px;
-  	}
+    .main-logo {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
 
-  	&__contacts {
-  		display: none;
-  	}
+    &__contacts {
+      display: none;
+    }
 
-  	&__inner .btn {
-  		display: none;
-  	}
+    &__inner .btn {
+      display: none;
+    }
+
+  @media (min-width: 768px) {
+
+    &__contacts {
+      display: none;
+    }
+
+    &__inner .btn {
+      display: none;
+    }
+
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
+    display: flex;
+
+    .main-logo {
+      text-align: left;
+    }
+
+    &__inner {}
+
+    &__inner .btn {
+      display: block;
+    }
+
+    &__contacts {
+      display: block;
+    }
     &__phone-link {
     text-decoration: none;
     font-size: 1.125rem;

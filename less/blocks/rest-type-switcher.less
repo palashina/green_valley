@@ -23,6 +23,8 @@
 		}
 
 		&__type-headline {
+			margin-left: 20px;
+			margin-right: 20px;
 			margin-bottom: 20px;
 			font-size: 1.125rem;
 			font-weight: normal;
@@ -35,34 +37,31 @@
 			line-height: 1.5rem;
 		}
 
-		&__options-item {
-			background-image: url(/img/rest-type-opt-health.jpg);
-			background-repeat: no-repeat;
-			background-size: cover;
-			text-align: center;
-			padding-top: 50px;
-			padding-bottom: 50px;
-			color: @black;
-		}
-
-		&__options-list {
-			display: none;
+		&__tabs {
+			position: absolute;
+			top: 480px;
+			left: 50%;
+			margin-left: -155px;
 		}
 	}
 
 	@media (min-width: 768px) {
+
+		&__tabs {
+			top: 400px;
+		}
 
 		&__type {
 			text-align: left;
 		}
 
 		&__type-item {
-			padding-left: 28px;
+			margin-left: -12px;
 			padding-top: 30px;
 			padding-bottom: 140px;
-		    background-image: url(../img/rest-type-switcher-promo.jpg);
-		    background-size: cover;
-		    background-repeat: no-repeat;
+			background-image: url(../img/rest-type-switcher-promo.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 
 		&__type-inner {
@@ -90,9 +89,38 @@
 			background-color: #fcffff;
 			padding: 4px 12px;
 		}
+
+		&__options-item {
+			background-image: url(/img/rest-type-opt-health.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: center;
+			padding-top: 100px;
+			padding-bottom: 50px;
+			color: @black;
+		}
+
+		&__options-list {
+			display: flex;
+		}
+
+		&__option-pict {}
+		&__option-text {}
 	}
 
-	@media (min-width: 1200px) {}
+	@media (min-width: 1200px) {
+
+		&__type-item {
+			background-image: url(../img/rest-type-switcher-promo-large.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		&__type-inner {
+			width: 1180px;
+			margin: 0 110px;
+		}
+	}
 
 	&__tabs {
 		position: absolute;
@@ -107,10 +135,11 @@
 	}
 
 	&__tab-item--active {
-			color: @orange-lighten;
+		color: @orange-lighten;
 	}
 
 	&__tab-item-link {
+		position: relative;
 		text-decoration: none;
 		font-size: 0.875rem;
 		line-height: 4.5rem;
@@ -119,22 +148,47 @@
 
 	&__tab-item-link:hover {
 		text-decoration: none;
-		color: @orange-lighten;
+		color: @orange-main;
 		transition-duration: 0.5s;
 	}
 
+	&__tab-item-link:hover:after {
+		position: absolute;
+		content: '';
+		display: block;
+		left: 40px;
+		top: 20px;
+		width: 30px;
+		height: 2px;
+		background-color: @orange-main;
+		transition-duration: 0.5s;
+	}
+
+	&__type {}
+
+	&__type-inner {}
+
 	&__options {}
 
-	&__options-item {}
+	&__options-item {
+		background-image: url(/img/rest-type-opt-health.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+		padding-top: 100px;
+		padding-bottom: 50px;
+		padding-left: 20px;
+		padding-right: 20px;
+		color: @black;
+	}
 
 	&__options-headline {
 		font-size: 1.625rem;
 		letter-spacing: 2px;
 		font-weight: normal;
 	}
-	&__options-list {}
 
-	&__option-pict {}
-	&__option-text {}
-
+	&__options-list {
+		display: none;
+	}
 }

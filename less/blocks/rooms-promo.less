@@ -1,32 +1,58 @@
 .rooms-promo {
-	// background-image: url(../img/rooms-promo.jpg);
-	// background-size: cover;
-	// background-repeat: no-repeat;
-	// padding-top: 67px;
-	// padding-bottom: 70px;
+
+
+	@media (min-width: 768px) {
+		background-image: url(../img/rooms-promo.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-top: 40px;
+		padding-bottom: 45px;
+
+		&__headline {
+			font-size: @font-size--more-then-biggest;
+			margin: 0;
+			line-height: 2.625em;
+		}
+
+		&__description {
+			display: block;
+			margin: 0;
+			text-align: center;
+			color: @grey-cream;
+			font-size: 1.125em;
+			letter-spacing: 1px;
+		}
+
+		&__numerals {
+			display: block;
+			margin: 0;
+			text-align: center;
+			color: @grey-cream;
+			font-size: 1.125em;
+			letter-spacing: 1px;
+		}
+	}
+
+	background-image: url(../img/rooms-promo-sm.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 67px;
+	padding-bottom: 65px;
 
 	&__headline {
 		text-align: center;
 		font-size: @font-size--biggest;
-		line-height: 2.625rem;
 		font-weight: normal;
 		letter-spacing: 2px;
 		color: @white;
 	}
 
-	@media (min-width: 320px) and (max-width: 500px) {
-		background-image: url(../img/rooms-promo-sm.jpg);
-		background-size: cover;
-		background-repeat: no-repeat;
-		padding-top: 67px;
-		padding-bottom: 65px;
-
-		&__description {
-			display: none;
-		}
-
-		&__numerals {
-			display: none;
-		}
+	&__description {
+		display: none;
 	}
+
+	&__numerals {
+		display: none;
+	}
+
 }

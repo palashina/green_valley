@@ -1,55 +1,114 @@
 .room-type {
+	width: 100%;
+	margin-bottom: 50px;
+	padding-top: 35px;
+	padding-bottom: 35px;
 	background-color: @grey-lightest;
 	border: 1px solid #ebebeb;
+	color: @grey-darkest;
 
-	@media (min-width: 320px) and (max-width: 500px) {
-		color: @grey-darkest;
+	@media (min-width: 768px) {
+		width: 728px;
+		margin: 0 auto;
+		margin-bottom: 50px;
 
-		&__title {
-			text-align: center;
-			font-size: 1.625rem;
-			font-weight: normal;
-			line-height: 1.188rem;
-		}
-
-		&__price {
-			text-align: center;
-			font-size: 1.125rem;
-			line-height: 1.5rem;
+		&__image-box {
+			width: 581px;
+			height: 305px;
+			margin: 0 auto;
 		}
 
 		&__image {
-			width: 100%;
-		}
-
-		&__numeral {
-			color: @orange-main;
+			max-width: 581px;
+			max-height: 305px;
 		}
 
 		&__description {
-			font-size: @font-size;
-			line-height: 1.375rem;
+			margin-left: 175px;
+			margin-right: 150px;
 		}
 
-		&__img-box {
-			width: 100%;
-			height: 200px;
+		&__all-buttons {
+			width: 390px;
+			margin: 0 auto;
+			display: flex;
+			align-items: baseline;
+		}
+
+		&__btn-box {
+			flex-basis: 50%
 		}
 
 		&__link-box {
-			margin-top: 30px;
+			flex-basis: 50%
 		}
+	}
 
-		&__more {
-			text-decoration: none;
-			color: @grey-darkest;
-			border-bottom: 1px dashed @grey-darkest;
-		}
+	@media (min-width: 1200px) {
+		// width: 1180px;
+		// display: flex;
 
-		&__more:hover {
-			border: none;
-			transition-duration: 0.25s;
-		}
+		// &__image-box {
+		// 	flex-grow: 4;
+		// }
+	}
 
+	&__title {
+		margin: 0;
+		text-align: center;
+		font-size: 26px;
+		font-weight: normal;
+		line-height: 1.188em;
+	}
+
+	&__price {
+		text-align: center;
+		padding-bottom: 20px;
+		padding-top: 5px;
+		font-size: 1.125em;
+		line-height: 1.5em;
+	}
+
+	&__image-box {
+		width: 100%;
+	}
+
+	&__image {
+		width: 100%;
+	}
+
+	&__numeral {
+		color: @orange-main;
+	}
+
+	&__description {
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-top: 20px;
+		font-size: @font-size;
+		line-height: 1.375rem;
+	}
+
+	&__btn-box {
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 40px;
+	}
+
+	&__link-box {
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	&__more {
+		text-decoration: none;
+		color: @grey-darkest;
+		border-bottom: 1px dashed @grey-darkest;
+	}
+
+	&__more:hover {
+		border: none;
+		transition-duration: 0.35s;
 	}
 }

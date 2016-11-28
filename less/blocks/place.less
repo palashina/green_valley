@@ -1,22 +1,23 @@
 .place {
-
-	@media (min-width: 320px) {
-	    background-image: url(../img/place-choose.jpg);
-	    padding-top: 50px;
-	    padding-bottom: 20px;
-
-	    &__headline {
-	    	text-align: center;
-	    	font-size: 1.625rem;
-	    	font-weight: normal;
-	    	line-height: 2rem;
-	    }
-    }
+	background-image: url(../img/place-choose.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 50px;
+	padding-bottom: 20px;
 
 	&__headline {
-		color: @white;
+		text-align: center;
+		font-size: 26px;
 		font-weight: normal;
-		letter-spacing: 2px;
-		line-height: 2rem;
+		color: @white;
+		letter-spacing: 1px;
+	}
+
+	@media (min-width: 768px) {
+		font-size: 30px;
+
+		&__other-room-types {
+			display: flex;
+		}
 	}
 }

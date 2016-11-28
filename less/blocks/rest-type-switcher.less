@@ -110,7 +110,7 @@
 		}
 
 		&__options {
-			background-image: url(/img/rest-type-opt-health.jpg);
+			background-image: url(../img/rest-type-opt-health.png);
 			background-repeat: no-repeat;
 			background-size: cover;
 			text-align: center;
@@ -126,10 +126,22 @@
 
 		&__options-list {
 			display: flex;
+			flex-wrap: wrap;
 			list-style-type: none;
 		}
 
-		&__option-pict {}
+		&__options-list li{
+			margin-right: 45px;
+		}
+
+		&__option-pict {
+			display: block;
+			margin-bottom: 10px;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+		}
+
 		&__option-text {}
 	}
 
@@ -146,21 +158,15 @@
 			margin: 0 110px;
 		}
 
-		&__options {
-			background-image: url(../img/rest-type-opt-health-big.png);
-			background-size: cover;
-			background-repeat: no-repeat;
-			margin-left: 240px;
-			margin-right: 240px;
-		}
+		&__options {}
 
 		&__options-item {
-			background-image: none;
-			// background-image: url(../img/rest-type-opt-health-big.png);
-			// background-size: cover;
-			// background-repeat: no-repeat;
-			// margin-left: 290px;
-			// margin-right: 290px;
+			background-image: url(../img/rest-type-opt-health.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin-left: 230px;
+			margin-right: 230px;
+			padding-bottom: 50px;
 		}
 
 		&__options-headline {
@@ -170,7 +176,13 @@
 			font-weight: normal;
 		}
 
-		&__options-list {}
+		&__options-list li{
+			margin-right: 45px;
+		}
+
+		&__options-list li:last-child {
+			margin-right: 0;
+		}
 
 		&__option-text {}
 

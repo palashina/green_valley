@@ -2,39 +2,27 @@
 	background-image: url(/img/reviews-image.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-
-	@media (min-width: 320px) and (max-width: 500px) {
-		margin-top: 50px;
-
-		&__inner {
-			padding-top: 70px;
-		}
-
-		&__item {
-			width: auto;
-		}
-	}
+	margin-top: 50px;
 
 	&__inner {
-		padding-bottom: 50px;
+		padding-top: 70px;
+		padding-bottom: 70px;
 	}
 
 	&__headline {
 		text-align: center;
-		font-size: 1.625rem;
+		font-size: 1.625em;
 		font-weight: normal;
-		letter-spacing: 2px;
+		letter-spacing: 1px;
 		color: @white;
 	}
 
 	&__item {
 		position: relative;
+		margin: 0 auto;
 		margin-top: 56px;
 		margin-bottom: 40px;
-		padding-left: 40px;
-		padding-right: 40px;
-		padding-top: 70px;
-		padding-bottom: 28px;
+		padding: 70px 40px 28px 40px;
 		text-align: center;
 		background-color: @white;
 	}
@@ -55,14 +43,14 @@
 		color: @black;
 		font-style: normal;
 		font-weight: bold;
-		line-height: 1.125rem;
+		line-height: 1.125em;
 		letter-spacing: 1px;
 	}
 
 	&__text {
 		margin-top: 40px;
-		font-size: 0.875rem;
-		line-height: 1.375rem;
+		font-size: @font-size--small;
+		line-height: 1.375em;
 
 	}
 
@@ -84,4 +72,27 @@
 		display: inline;
 	}
 
+	&__button-all {
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	@media (min-width: 768px) {
+
+		&__item {
+			width: 478px;
+			margin-top: 57px;
+		}
+
+		&__headline {
+			font-size: 1.875em;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		&__items {
+			display: flex;
+		}
+	}
 }

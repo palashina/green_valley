@@ -1,46 +1,67 @@
 .page-footer {
+	margin-top: 25px;
+	margin-bottom: 25px;
 
-	@media (min-width: 320px) and (max-width: 500px) {
-		margin-top: 25px;
-		margin-bottom: 25px;
-		text-align: center;
+	@media (min-width: 768px) {
+
+		&__inner {
+			display: flex;
+			margin-left: 20px;
+			margin-right: 20px;
+			font-size: @font-size--small;
+		}
 
 		&__address {
-			display: none;
+			display: block;
+			width: 155px;
 		}
 
 		&__contacts {
-			display: none;
+			display: block;
+			width: 155px;
 		}
 
-	    &__phone-link {
-	    	display: none;
-	    }
+		&__phone-link {
+			text-decoration: none;
+			color: @grey-darkest;
+		}
 
-	    &__mail-link {
-	    	display: none;
-	    }
-
+		&__mail-link {
+			text-decoration: none;
+			color: @grey-darkest;
+		}
 	}
 
-	&__inner {}
+	@media (min-width: 1200px) {
 
-	&__address {}
-
-	&__all-icons {}
-
-	&__social-links {
-		margin-top: 10px;
+		&__inner {
+			margin-left: 110px;
+			margin-right: 110px;
+		}
 	}
 
-	&__contacts {}
-
-	&__phone-link {}
-
-	&__mail-link {}
+	&__all-icons {
+		width: 145px;
+		margin: 0 auto;
+	}
 
 	&__link {
 		margin-right: 28px;
 	}
 
+	&__link:last-child {
+		margin-right: 0;
+	}
+
+	&__address {
+		display: none;
+	}
+
+	&__contacts {
+		display: none;
+	}
+
+	&__social-links {
+		margin-top: 10px;
+	}
 }

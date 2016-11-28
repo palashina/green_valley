@@ -1,45 +1,83 @@
 .discounts {
 
-
-	@media (min-width: 320px) and (max-width: 50px) {
-
-	}
-
 	&__headline {
 		padding-top: 50px;
 		text-align: center;
-		font-size: 1.625rem;
+		font-size: 1.625em;
+		font-weight: normal;
 		color: @black;
-        letter-spacing: 1px;
+		letter-spacing: 1px;
 	}
 
 	&__item {
 		padding-top: 158px;
-		padding-bottom: 30px;
-		background-image: url(../img/discounts-image.jpg);
-	    background-size: cover;
-	    background-repeat: no-repeat;
-    }
+		padding-bottom: 60px;
+		background-image: url(../img/discounts-image-small.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0 -50px;
+	}
 
-    &__item-inner {
-    	padding-top: 5px;
-    	padding-left: 10px;
-    	padding-bottom: 10px;
-    	width: 295px;
-    	background-color: @white;
-    }
+	&__item-inner {
+		padding-top: 5px;
+		padding-left: 10px;
+		padding-bottom: 10px;
+		width: 295px;
+		background-color: @grey-cream;
+		opacity: 0.95;
+	}
 
-    &__item-inner-title {
-    	font-size: @font-size;
-        font-weight: normal;
-        line-height: 1.25rem;
-    	text-transform: uppercase;
-    	color: @orange-lighten;
-    }
+	&__item-inner-title {
+		font-size: @font-size;
+		font-weight: normal;
+		line-height: 1.25em;
+		text-transform: uppercase;
+		color: @orange-lighten;
+	}
 
-    &__item-inner-about {
-    	font-size: @font-size;
-    	color: @grey-darkest;
-    }
+	&__item-inner-about {
+		font-size: @font-size;
+		color: @grey-darkest;
+	}
 
+	@media (min-width: 768px) {
+
+		&__headline {
+			font-size: @font-size--biggest;
+		}
+
+		&__item {
+			background-image: url(../img/discounts-image-medium.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 0 -100px;
+		}
+
+		&__item-inner-title {
+			font-size: 1.125em;
+		}
+
+		&__item-inner-about {
+			font-size: @font-size;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		&__inner {
+			width: 1170px;
+			margin: 0 auto;
+		}
+
+		&__item {
+			background-image: url(../img/discounts-image-big.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 0 -180px;
+		}
+
+		&__item-inner-title {
+			font-size: @font-size--small;
+		}
+	}
 }

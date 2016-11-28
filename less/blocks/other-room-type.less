@@ -1,21 +1,23 @@
 .other-room-type {
+	width: 280px;
+	margin: 0 auto;
+	margin-top: 18px;
+	border: 1px solid #139985;
 
-	@media (min-width: 320px) {
-		&__img-box {
-	    	width: 280px;
-	    	height: 200px;
-	    }
+	&__img-box {
+		width: 280px;
+		height: 200px;
+		overflow: hidden;
+	}
 
-	    &__image {
-	    	width: 280px;
-	    	height: 200px;
-	    }
+	&__image {
+		max-width: 280px;
+	}
 
-	    &__description {
-	    	width: 280px;
-	    	background-color: @white;
-	    	margin-top: 0;
-	    }
+	&__description {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		background-color: @white;
 	}
 
 	&__description {
@@ -23,10 +25,11 @@
 	}
 
 	&__title {
-		font-size: 1.625rem;
+		margin-bottom: 13px;
+		margin-top: 0;
+		font-size: 26px;
 		font-weight: normal;
-		line-height: 1.188rem;
-		letter-spacing: 1px;
+		line-height: 1.188em;
 		color: @grey-darkest;
 	}
 
@@ -37,9 +40,27 @@
 
 	&__numeral {
 		font-size: @font-size;
-		line-height: 1.5rem;
+		line-height: 1.5em;
 		color: @orange-lighten;
 		font-weight: bold;
+	}
+
+	@media (min-width: 768px) {
+		width: 353px;
+
+		&__img-box {
+			width: 353px;
+			height: 200px;
+			overflow: hidden;
+		}
+
+		&__image {
+			max-width: 100%;
+		}
+
+		&__description {
+			padding-bottom: 50px;
+		}
 	}
 
 }

@@ -1,22 +1,24 @@
 .booking-promo {
 
-	@media (min-width: 320px) and (max-width: 500px) {
+	&__headline {
+		padding-top: 75px;
+		text-align: center;
+		border-top: 1px solid @grey-cold-cream;
+		font-size: @font-size--biggest;
+		font-weight: normal;
+		letter-spacing: 2px;
+	}
 
-		&__headline {
-			text-align: center;
-			font-size: @font-size--biggest;
-			font-weight: normal;
-			letter-spacing: 2px;
-		}
+	&__about {
+		padding-left: 48px;
+		padding-right: 48px;
+		text-align: center;
+		font-size: @font-size;
+		line-height: 1.25em;
+	}
 
-		&__about {
-			font-size: @font-size;
-			line-height: 1.25rem;
-		}
-
-		&__phone-link {
-			text-decoration: none;
-			color: @orange-main;
-		}
+	&__phone-link {
+		text-decoration: none;
+		color: @orange-main;
 	}
 }

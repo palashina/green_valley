@@ -27,14 +27,9 @@
 		background-color: @grey-cold-cream;
 	}
 
-	&__step-title {}
-
-	&__title
-
 	&__calendar {}
 
 	&__date {
-		display: block;
 		text-align: center;
 		font-size: @font-size--small;
 		text-transform: uppercase;
@@ -42,9 +37,93 @@
 		color: #575757;
 	}
 
-	&__date input {
+	&__date {
 		display: block;
 		margin: auto;
-		padding: 20px 19px;
+		margin-bottom: 40px;
+	}
+
+	&__numeral {
+		display: inline-block;
+		text-align: center;
+		padding: 20px;
+		height: 48px;
+		width: 54px;
+		border: none;
+		font-size: @font-size--small;
+		text-transform: uppercase;
+	}
+
+	&__numeral:last-child {
+		width: 70px;
+	}
+
+	&__place-types {
+		display: flex;
+		margin: 0 auto;
+		width: 280px;
+		height: 160px;
+		border: 1px solid @grey-lighten;
+	}
+
+	&__place-type {
+		width: 50%;
+		font-size: @font-size--small;
+		color: @grey-darken;
+		text-transform: uppercase;
+	}
+
+	&__place-type input {
+		text-decoration: none;
+	}
+
+	&__cottage-types {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding-left: 50px;
+		background-color: @white;
+	}
+
+	&__cottage-type {
+		margin-bottom: 38px;
+		color: @grey-main;
+		text-transform: uppercase;
+		font-size: @font-size--small;
+		letter-spacing: 1px;
+	}
+
+	&__cottage-type--active {
+		position: relative;
+		color: @grey-darkest;
+	}
+
+	&__cottage-type--active:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 10px;
+		height: 6px;
+		border-left: 4px solid @green-main;
+		border-bottom: 4px solid @green-main;
+		transform: rotate(310deg);
+		left: -17px;
+		right: 370px;
+		top: 0px;
+	}
+
+	&__person-info p {
+		color: @grey-darken;
+		font-size: @font-size--small;
+	}
+
+	&__person-info input {
+		display: block;
+		width: 280px;
+		height: 50px;
+		margin-bottom: 20px;
+		border: 1px solid @grey-lighten;
+		font-size: @font-size--small;
+		text-transform: uppercase;
 	}
 }

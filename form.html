@@ -125,7 +125,6 @@
 	<div class="booking-form__step">
 		<legend class="booking-form__step-title">Шаг 4</legend>
 		<h2 class="booking-form__title">Персональная информация</h2>
-
 		<div class="booking-form__person-info">
 			<label for="person-info-name" class="booking-form__person-info-name">
 				<input id="person-info-name" type="text" placeholder="имя">
@@ -142,17 +141,24 @@
 			<p>На этот адрес мы вышлем вам подтверждение о забронированном номере.</p>
 			</label>
 		</div>
-
 	</div>
 <!-- /STEP-FOUR -->
 <!-- STEP-FIVE -->
 	<div class="booking-form__step">
 		<legend class="booking-form__step-title">Шаг 5</legend>
 		<h2 class="booking-form__title">Способ оплаты</h2>
-		<div class="booking-form__payment">
-			<div class="booking-form__payment"><input name="payment-type" type="radio" value="arrival" checked>По приезду</div>
-			<div class="booking-form__payment  booking-form__payment--active"><a href="#pay-now"><input name="payment-type" type="radio" value="now">Сейчас</a></div>
+
+		<div class="booking-form__payment-variations">
+			<div class="booking-form__payment">
+				<input name="payment-type" class="booking-form__payment-non-checked" type="radio" value="arrival" checked>По приезду
+			</div>
+			<div class="booking-form__payment  booking-form__payment--active">
+				<a href="#pay-now">
+					<input name="payment-type" class="booking-form__payment-checked" type="radio" value="now">Сейчас
+				</a>
+			</div>
 		</div>
+
 		<div id="pay-now" class="booking-form__pay-now">
 			<label for="cart-number">номер карты
 				<input id="cart-number" type="number" placeholder="0000-0000-0000-0000">
@@ -164,15 +170,16 @@
 				<input id="cvv-code" type="number" placeholder="123">
 			</label>
 			<label for="cart-valid">действует до
-				<input id="cart-valid" type="month" name="calendar">
+				<input id="cart-valid" name="calendar" placeholder="01 / 2018">
 			</label>
 		</div>
+
 <!-- обратить внимание на классы внизу!! не перепутать. чёрточка стилизована так же как цена в случае success-->
 		<div class="booking-form__for-payment">
-			<p>к оплате</p>
-			<div class="booking-form__for-payment-price-success">14 000 руб.</div>
+			<p class="booking-form__for-payment-title">к оплате</p>
+<!-- 			<div class="booking-form__for-payment-price-success">14 000 руб.</div> -->
 			<div class="booking-form__for-payment-price-error--active">
-				<p class="booking-form__for-payment-price-success">-</p>
+				<p class="booking-form__for-payment-price-no-price">-</p>
 				<p>Пожалуйста, выберите дату въезда и выезда, чтобы увидеть сумму к оплате</p>
 			</div>
 		</div>

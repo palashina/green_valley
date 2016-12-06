@@ -1,7 +1,17 @@
 .booking-form {
 
+	&__inner {}
+
+	&__step {
+		padding: 50px 20px;
+	}
+
+	&__inner &__step:nth-child(2n+1) {
+		background-color: @grey-cold-cream;
+	}
+
 	&__step-title {
-		margin: auto;
+		margin: 0 auto;
 		font-size: 0.875rem;
 		text-transform: uppercase;
 		color: @grey-main;
@@ -16,45 +26,66 @@
 		color: @grey-darkest;
 	}
 
-	&__inner {}
-
-	&__step {
-		padding: 50px 20px;
-	}
-
-	&__inner &__step:nth-child(2n+1) {
-		background-color: @grey-cold-cream;
-	}
-
-	&__calendar {}
-
-	&__date {
+	&__calendar-title {
+		display: block;
 		text-align: center;
+		margin-top: 35px;
+		margin-bottom: 18px;
 		font-size: @font-size--small;
 		text-transform: uppercase;
 		line-height: 1.125rem;
 		color: #575757;
 	}
 
-	&__date {
-		display: block;
-		margin: auto;
-		margin-bottom: 40px;
+	&__calendar-inputs-box {
+		position: relative;
+		display: flex;
+		margin: 0 auto;
+		width: 200px;
+		justify-content: space-between;
+		background-color: pink;
+		margin-top: 18px;
 	}
 
-	&__numeral {
-		display: inline-block;
-		text-align: center;
+	&__calendar-input {
+		height: 50px;
+		width: 200px;
+		border: 1px solid #000;
+		background: transparent;
+
+		.js & {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			color: transparent;
+			border-color: transparent;
+
+			&::-webkit-input-placeholder {color:transparent;}
+			&::-moz-placeholder          {color:transparent;}
+			&:-moz-placeholder           {color:transparent;}
+			&:-ms-input-placeholder      {color:transparent;}
+		}
+	}
+
+	&__calendar-field {
+		display: none;
+		width: 60px;
+		height: 30px;
 		padding: 20px;
-		height: 48px;
-		width: 54px;
-		border: none;
+		border: 1px solid #000;
+		overflow: hidden;
+
+		.js & {
+			display: block;
+		}
+	}
+
+	&__calendar-placeholder {
+		color: @grey-main;
 		font-size: @font-size--small;
 		text-transform: uppercase;
-	}
-
-	&__numeral:last-child {
-		width: 70px;
 	}
 
 	&__place-types {

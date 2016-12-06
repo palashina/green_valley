@@ -1,9 +1,21 @@
 .booking-promo {
+	border-top: 1px solid @grey-cold-cream;
+	padding-top: 70px;
+	padding-bottom: 45px;
+
+	@media (min-width: 768px) {
+		width: 450px;
+		margin: 0 auto;
+
+		&__about {
+			padding: 0;
+			text-align: center;
+		}
+	}
 
 	&__headline {
-		padding-top: 75px;
+		margin: 0 auto;
 		text-align: center;
-		border-top: 1px solid @grey-cold-cream;
 		font-size: @font-size--biggest;
 		font-weight: normal;
 		letter-spacing: 2px;

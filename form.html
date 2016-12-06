@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
 	<title>Green Valley &#8211; Бронирование</title>
 </head>
 <body>
@@ -47,22 +49,43 @@
 
 	<div class="booking-form__inner">
 <!-- STEP-ONE -->
+
 	<div class="booking-form__step">
 		<legend id="choose-date-again" class="booking-form__step-title">Шаг 1</legend>
+
 		<h2 class="booking-form__title">Дата отдыха</h2>
+
 		<div class="booking-form__calendar">
-			<label for="entry-date" class="booking-form__date">Дата въезда
-				<input id="entry-day" class="booking-form__numeral" name="calendar" placeholder="дд">
-				<input id="entry-month" class="booking-form__numeral" name="calendar" placeholder="мм">
-				<input id="entry-year" class="booking-form__numeral" name="calendar" placeholder="гггг">
-			</label>
-			<label for="exit-date" class="booking-form__date">Дата выезда
-				<input id="exit-day" class="booking-form__numeral" name="calendar" placeholder="дд">
-				<input id="exit-month" class="booking-form__numeral" name="calendar" placeholder="мм">
-				<input id="exit-year" class="booking-form__numeral" name="calendar" placeholder="гггг">
-			</label>
+			<label for="entry-date" class="booking-form__calendar-title">Дата въезда</label>
+				<div class="booking-form__calendar-inputs-box">
+					<input class="booking-form__calendar-input" type="text" id="calendar-start" placeholder="дата начала отдыха">
+					<span class="booking-form__calendar-field" id="start-day">
+						<span class="booking-form__calendar-placeholder">дд</span>
+					</span>
+					<span class="booking-form__calendar-field" id="start-month">
+						<span class="booking-form__calendar-placeholder">мм</span>
+					</span>
+					<span class="booking-form__calendar-field" id="start-year">
+						<span class="booking-form__calendar-placeholder">гггг</span>
+					</span>
+				</div>
+			<label for="exit-date" class="booking-form__calendar-title">Дата выезда</label>
+				<div class="booking-form__calendar-inputs-box">
+
+					<input class="booking-form__calendar-input" type="text" id="calendar-fin" placeholder="дата окончания отдыха">
+					<span class="booking-form__calendar-field" id="fin-day">
+						<span class="booking-form__calendar-placeholder">дд</span>
+					</span>
+					<span class="booking-form__calendar-field" id="fin-month">
+						<span class="booking-form__calendar-placeholder">мм</span>
+					</span>
+					<span class="booking-form__calendar-field" id="fin-year">
+						<span class="booking-form__calendar-placeholder">гггг</span>
+					</span>
+				</div>
 		</div>
 	</div>
+
 <!-- /STEP-ONE -->
 <!-- STEP-TWO -->
 	<div class="booking-form__step">
@@ -212,5 +235,9 @@
 	</div>
 </div>
 <!-- /PAGE-FOOTER -->
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>document.documentElement.className +='js';</script>
 </body>
 </html>

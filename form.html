@@ -42,11 +42,13 @@
 </div>
 <!-- /BOOKING-PROMO-->
 <!-- BOOKING-FORM -->
+
 <form action="" class="booking-form">
-   <div class="booking-form__inner">
+
+	<div class="booking-form__inner">
 <!-- STEP-ONE -->
 	<div class="booking-form__step">
-		<legend class="booking-form__step-title">Шаг 1</legend>
+		<legend id="choose-date-again" class="booking-form__step-title">Шаг 1</legend>
 		<h2 class="booking-form__title">Дата отдыха</h2>
 		<div class="booking-form__calendar">
 			<label for="entry-date" class="booking-form__date">Дата въезда
@@ -180,12 +182,14 @@
 <!-- 			<div class="booking-form__for-payment-price-success">14 000 руб.</div> -->
 			<div class="booking-form__for-payment-price-error--active">
 				<p class="booking-form__for-payment-price-no-price">-</p>
-				<p>Пожалуйста, выберите дату въезда и выезда, чтобы увидеть сумму к оплате</p>
+				<p class="booking-form__for-payment-choose-date">Пожалуйста, <a href="#choose-date-again" class="booking-form__for-payment-choose">выберите дату</a> въезда и выезда, чтобы увидеть сумму к оплате</p>
 			</div>
 		</div>
 	</div>
 <!-- STEP-FIVE -->
-	<div class="btn btn--bg-green"><input type="submit" value="Забронировать"></div>
+	<div class="booking-form__button-submit">
+		<input class="btn btn--bg-greener" type="submit" value="Забронировать">
+	</div>
   </div>
 </form>
 <!-- /BOOKING-FORM -->

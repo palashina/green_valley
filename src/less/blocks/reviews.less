@@ -1,0 +1,106 @@
+.reviews {
+	background-image: url(../img/reviews-image.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 50px;
+
+	&__inner {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	&__headline {
+		text-align: center;
+		font-size: 1.625em;
+		font-weight: normal;
+		letter-spacing: 1px;
+		color: @white;
+	}
+
+	&__item {
+		position: relative;
+		margin: 0 auto;
+		margin-top: 56px;
+		margin-bottom: 40px;
+		padding: 70px 40px 28px 40px;
+		text-align: center;
+		background-color: @white;
+	}
+
+	&__photo {
+		position: absolute;
+		box-sizing: border-box;
+		top: -25px;
+		left: 50%;
+		margin-left: -40px;
+		width: 80px;
+		height: 80px;
+		border: 2px solid @white;
+	}
+
+	&__name {
+		font-size: @font-size--small;
+		color: @black;
+		font-style: normal;
+		font-weight: bold;
+		line-height: 1.125em;
+		letter-spacing: 1px;
+	}
+
+	&__text {
+		margin-top: 40px;
+		font-size: @font-size--small;
+		line-height: 1.375em;
+
+	}
+
+	&__rest-date {
+		font-size: @font-size--small;
+		line-height: 1.125rem;
+	}
+
+	&__rest-term {
+		font-size: @font-size--small;
+		line-height: 1.125rem;
+	}
+
+	&__rest-term-from {
+		display: inline;
+	}
+
+	&__rest-term-to {
+		display: inline;
+	}
+
+	&__button-all {
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	@media (min-width: 768px) {
+
+		&__item {
+			width: 478px;
+			margin-top: 57px;
+		}
+
+		&__headline {
+			font-size: 1.875em;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		&__items {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+		}
+
+		&__item {
+			width: 480px;
+			height: 283px;
+			margin: 0 22px;
+		}
+	}
+}

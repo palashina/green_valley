@@ -1,16 +1,16 @@
 {
-  "name": "EPIC_starter_kit",
+  "name": "Green_Valley",
   "version": "1.0.0",
   "description": "Start.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/gulp"
   },
-  "author": "Nikolay Gromov",
+  "author": "Alexandra Palashina",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicothin/epic_start-kit"
+    "url": "https://github.com/palashina/green_valley"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",

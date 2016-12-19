@@ -11,7 +11,7 @@
 			text-align: left;
 		}
 
-		&__type-item {
+		&__type-item&__is-active {
 			margin-left: -12px;
 			padding-top: 30px;
 			padding-bottom: 140px;
@@ -48,44 +48,51 @@
 		}
 
 		&__options {
-			background-image: url(../img/rest-type-opt-health.png);
-			background-repeat: no-repeat;
-			background-size: cover;
-			text-align: center;
 			padding-top: 100px;
 			padding-bottom: 50px;
 			color: @black;
 		}
 
 		&__options-item {
-			margin-left: 85px;
-			margin-right: 85px;
+			margin-left: 70px;
+			margin-right: 70px;
 		}
 
 		&__options-list {
 			display: flex;
 			flex-wrap: wrap;
+			text-align: center;
 			list-style-type: none;
 		}
 
 		&__options-list li{
-			margin-right: 45px;
+			margin-left: 40px;
+			margin-top: 30px;
+		}
+
+		&__options-list li:first-child {
+			margin-left: 0;
 		}
 
 		&__option-pict {
 			display: block;
 			margin-bottom: 10px;
 			border-radius: 50%;
-			width: 100px;
-			height: 100px;
+			width: 80px;
+			height: 80px;
 		}
 
-		&__option-text {}
+		&__option-text {
+			font-size: @font-size--small;
+			text-transform: uppercase;
+			color: @grey-darkest;
+		}
+
 	}
 
 	@media (min-width: 1200px) {
 
-		&__type-item {
+		&__type-item&__is-active {
 			background-image: url(../img/rest-type-switcher-promo-large.jpg);
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -99,32 +106,21 @@
 		&__options {}
 
 		&__options-item {
-			background-image: url(../img/rest-type-opt-health.png);
-			background-size: cover;
-			background-repeat: no-repeat;
-			margin-left: 230px;
-			margin-right: 230px;
+			margin-left: 200px;
+			margin-right: 200px;
 			padding-bottom: 50px;
 		}
 
-		&__options-headline {
-			font-size: @font-size--biggest;
-			line-height: 1.375em;
-			letter-spacing: 2px;
-			font-weight: normal;
-		}
+	// 	&__options-headline {
+	// 		font-size: @font-size--biggest;
+	// 		line-height: 1.375em;
+	// 		letter-spacing: 2px;
+	// 		font-weight: normal;
+	// 	}
 
-		&__options-list li{
-			margin-right: 45px;
-		}
+	// 	&__option-text {}
 
-		&__options-list li:last-child {
-			margin-right: 0;
-		}
-
-		&__option-text {}
-
-		&__option-pict {}
+	// 	&__option-pict {}
 	}
 
 	&__type {
@@ -134,6 +130,11 @@
 	}
 
 	&__type-item {
+		display: none;
+	}
+
+	&__type-item&__is-active {
+		display: block;
 		background-image: url(../img/rest-type-family.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -166,16 +167,14 @@
 		margin-left: -155px;
 	}
 
-	&__tabs {
-		position: absolute;
-		top: 480px;
-		left: 50%;
-		margin-left: -155px;
-	}
-
 	&__tab-item {
 		display: inline-block;
+		margin-right: 20px;
 		list-style-type: none;
+	}
+
+	&__tab-item:last-child {
+		margin-right: 0;
 	}
 
 	&__tab-item--active {
@@ -212,25 +211,23 @@
 
 	&__type-inner {}
 
-	&__options {}
-
-	&__options-item {
-		background-image: url(../img/rest-type-opt-health.jpg);
+	&__options {
+		background-image: url(../img/rest-type-opt-health.png);
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+
+	&__options-item {
 		text-align: center;
 		padding-top: 50px;
 		padding-bottom: 50px;
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 25px;
+		padding-right: 25px;
 		color: @black;
 	}
 
-	&__options-headline {
-		font-size: @font-size--biggest;
-		line-height: 1.375em;
-		letter-spacing: 2px;
-		font-weight: normal;
+	&__options-item p {
+		font-size: @font-size;
 	}
 
 	&__options-headline {

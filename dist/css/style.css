@@ -197,19 +197,66 @@ h5 {
   font-family: 'PT Serif Caption', serif;
 }
 .page-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: #191919;
+}
+.page-header__inner {
+  position: relative;
+  margin: 0 auto;
 }
 .page-header .main-logo {
   display: block;
   text-align: center;
-  margin-top: 15px;
-  margin-bottom: 25px;
 }
 .page-header__contacts {
   display: none;
 }
 .page-header__inner .btn {
   display: none;
+}
+.main-nav {
+  /*включение вертикального меню в моб. и планш.*/
+}
+.main-nav__nav {
+  display: none;
+}
+.main-nav__toggler {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: -4px;
+}
+.main-nav__toggler-link {
+  display: inline-block;
+  padding: 21px 6px;
+  text-align: center;
+}
+.main-nav__toggler-link span {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 4px;
+  background-color: #ff7435;
+  box-shadow: inset 0 0 5px #ffbea1;
+}
+.main-nav__toggler-link span:before,
+.main-nav__toggler-link span:after {
+  position: absolute;
+  content: '';
+  display: block;
+  margin: 9px 0;
+  width: 28px;
+  height: 4px;
+  background-color: #ff7435;
+  box-shadow: inset 0 0 5px #ffbea1;
+}
+.main-nav__toggler-link span:before {
+  top: 9px;
+}
+.main-nav__list {
+  margin: 0 auto;
+  padding: 0;
 }
 .rest-type-switcher {
   position: relative;
@@ -220,6 +267,10 @@ h5 {
   line-height: 1.625rem;
 }
 .rest-type-switcher__type-item {
+  display: none;
+}
+.rest-type-switcher__type-item.rest-type-switcher__is-active {
+  display: block;
   background-image: url(../img/rest-type-family.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -247,15 +298,13 @@ h5 {
   left: 50%;
   margin-left: -155px;
 }
-.rest-type-switcher__tabs {
-  position: absolute;
-  top: 480px;
-  left: 50%;
-  margin-left: -155px;
-}
 .rest-type-switcher__tab-item {
   display: inline-block;
+  margin-right: 20px;
   list-style-type: none;
+}
+.rest-type-switcher__tab-item:last-child {
+  margin-right: 0;
 }
 .rest-type-switcher__tab-item--active {
   color: #ff7435;
@@ -283,22 +332,21 @@ h5 {
   background-color: #e85715;
   transition-duration: 0.5s;
 }
-.rest-type-switcher__options-item {
-  background-image: url(../img/rest-type-opt-health.jpg);
+.rest-type-switcher__options {
+  background-image: url(../img/rest-type-opt-health.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.rest-type-switcher__options-item {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
   color: #000;
 }
-.rest-type-switcher__options-headline {
-  font-size: 30px;
-  line-height: 1.375em;
-  letter-spacing: 2px;
-  font-weight: normal;
+.rest-type-switcher__options-item p {
+  font-size: 16px;
 }
 .rest-type-switcher__options-headline {
   font-size: 30px;
@@ -309,17 +357,11 @@ h5 {
 .rest-type-switcher__options-list {
   display: none;
 }
-.gallery__inner {
-  padding: 0;
-}
 .gallery__picture {
   width: 100%;
 }
-.gallery__gallery-thumbs {
+.gallery #gallery-thumbs {
   display: none;
-}
-.gallery__gallery-thumbs {
-  margin-right: 110px;
 }
 .reviews {
   background-image: url(../img/reviews-image.jpg);
@@ -507,6 +549,21 @@ h5 {
   text-transform: uppercase;
   margin: 0;
   padding-bottom: 15px;
+}
+.location__way-option-title {
+  position: relative;
+}
+.location__way-option-title:before {
+  content: '';
+  position: absolute;
+  left: 100px;
+  bottom: 50px;
+  background-image: url(../img/spritesheet.png);
+}
+.location__way-option-title-bus:before {
+  width: 60px;
+  height: 30px;
+  background-position: 0px 107px;
 }
 .location__way-option-trip {
   font-size: 16px;
@@ -1045,11 +1102,6 @@ h5 {
   padding-right: 20px;
   padding-bottom: 80px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
-  .main-nav__nav {
-    display: none;
-  }
-}
 @media (min-width: 768px) {
   .page-header__contacts {
     display: none;
@@ -1066,7 +1118,7 @@ h5 {
   .rest-type-switcher__type {
     text-align: left;
   }
-  .rest-type-switcher__type-item {
+  .rest-type-switcher__type-item.rest-type-switcher__is-active {
     margin-left: -12px;
     padding-top: 30px;
     padding-bottom: 140px;
@@ -1098,38 +1150,47 @@ h5 {
     padding: 4px 12px;
   }
   .rest-type-switcher__options {
-    background-image: url(../img/rest-type-opt-health.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
     padding-top: 100px;
     padding-bottom: 50px;
     color: #000;
   }
   .rest-type-switcher__options-item {
-    margin-left: 85px;
-    margin-right: 85px;
+    margin-left: 70px;
+    margin-right: 70px;
   }
   .rest-type-switcher__options-list {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    text-align: center;
     list-style-type: none;
   }
   .rest-type-switcher__options-list li {
-    margin-right: 45px;
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+  .rest-type-switcher__options-list li:first-child {
+    margin-left: 0;
   }
   .rest-type-switcher__option-pict {
     display: block;
     margin-bottom: 10px;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
-  .gallery__gallery-thumbs {
+  .rest-type-switcher__option-text {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #191919;
+  }
+  .gallery #gallery-thumbs {
     display: -ms-flexbox;
     display: flex;
+  }
+  .gallery__thumb {
+    display: inline-block;
   }
   .reviews__item {
     width: 478px;
@@ -1291,18 +1352,18 @@ h5 {
     text-align: left;
   }
   .page-header__inner {
-    width: 1180px;
-    margin: 0 110px;
+    margin: 0 80px;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    -ms-flex-align: baseline;
-    align-items: baseline;
   }
   .page-header__inner .btn {
     display: block;
   }
   .page-header__contacts {
     display: block;
+    float: left;
+    margin-left: 40px;
+    margin-top: 8px;
   }
   .page-header__phone-link {
     text-decoration: none;
@@ -1317,16 +1378,26 @@ h5 {
     line-height: 1.125rem;
     color: #4c4c4c;
   }
+  .page-header__button {
+    float: right;
+    margin-left: 30px;
+    margin-top: 7px;
+  }
+  .main-nav {
+    float: left;
+    margin-left: 35px;
+  }
   .main-nav__nav {
     display: -ms-flexbox;
     display: flex;
+    float: right;
     font-size: 14px;
     line-height: 3.125rem;
   }
   .main-nav__list {
     display: -ms-flexbox;
     display: flex;
-    margin: 0 auto;
+    margin-top: 4px;
   }
   .main-nav__item {
     margin-right: 20px;
@@ -1343,7 +1414,10 @@ h5 {
   .main-nav__link:hover {
     color: #e85715;
   }
-  .rest-type-switcher__type-item {
+  .main-nav__toggler {
+    display: none;
+  }
+  .rest-type-switcher__type-item.rest-type-switcher__is-active {
     background-image: url(../img/rest-type-switcher-promo-large.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -1353,29 +1427,17 @@ h5 {
     margin: 0 110px;
   }
   .rest-type-switcher__options-item {
-    background-image: url(../img/rest-type-opt-health.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-left: 230px;
-    margin-right: 230px;
+    margin-left: 200px;
+    margin-right: 200px;
     padding-bottom: 50px;
-  }
-  .rest-type-switcher__options-headline {
-    font-size: 30px;
-    line-height: 1.375em;
-    letter-spacing: 2px;
-    font-weight: normal;
-  }
-  .rest-type-switcher__options-list li {
-    margin-right: 45px;
-  }
-  .rest-type-switcher__options-list li:last-child {
-    margin-right: 0;
   }
   .gallery {
     margin-left: 110px;
     margin-right: 110px;
     text-align: center;
+  }
+  .gallery__inner {
+    padding: 0;
   }
   .reviews__items {
     display: -ms-flexbox;

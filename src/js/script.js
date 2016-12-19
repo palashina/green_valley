@@ -1,5 +1,7 @@
 $(document).ready( function() {
 
+/*галерея на главной*/
+
 $('#gallery-thumbs').owlCarousel({
   items:3,
   loop:true,
@@ -22,7 +24,29 @@ $('#gallery-thumbs a').on('click', function(e){
   e.preventDefault();
   var imageUrl = $(this).attr('href');
   $('#gallery-main-pict').html('<img src="'+imageUrl+'" alt="" />');
-})
+});
+
+/*табы, переключалка на главной*/
+
+var tabs = document.querySelectorAll('.rest-type-switcher__tabs .rest-type-switcher__tab-item a');
+var restType = document.querySelectorAll('.rest-type-switcher__type .rest-type-switcher__type-item');
+
+function changeTab(event) {
+  for (var i=0; i<tabs.length; i++) {
+    tabs[i].parentNode.classList.remove('rest-type-switcher__is-active');
+  }
+  event.target.parentNode.classList.add('rest-type-switcher__is-active');
+  for (var i=0; i<tabs.length; i++) {
+    restType[i].classList.remove('rest-type-switcher__is-active');
+  }
+
+var link = event.target.getAttribute('href');
+document.querySelector(link).classList.add('rest-type-switcher__is-active');
+}
+
+for (var i=0; i<tabs.length; i++) {
+  tabs[i].addEventListener('click', changeTab);
+}
 
 });
 

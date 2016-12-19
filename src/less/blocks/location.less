@@ -41,6 +41,24 @@
 		padding-bottom: 15px;
 	}
 
+	&__way-option-title {
+		position: relative;
+	}
+
+	&__way-option-title:before {
+		content: '';
+		position: absolute;
+		left: 100px;
+		bottom: 50px;
+		background-image: url(../img/spritesheet.png);
+	}
+
+	&__way-option-title-bus:before {
+		width: 60px;
+		height: 30px;
+		background-position: 0px 107px;
+	}
+
 	&__way-option-trip {
 		font-size: @font-size;
 		margin: 0;

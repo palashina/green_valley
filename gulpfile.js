@@ -9,6 +9,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
 const browserSync = require('browser-sync').create();
+const ghPages = require('gulp-gh-pages');
 
 // ЗАДАЧА: Компиляция препроцессора
 gulp.task('less', function(){
@@ -43,6 +44,12 @@ gulp.task('img', function() {
 gulp.task('build', gulp.series(
   'less', 'html', 'img'
 ));
+
+// Публикация на github-pages
+  gulp.task('deploy', function() {
+    return gulp.src('dist/**/*')
+    .pipe(ghPages());
+});
 
 // ЗАДАЧА: Локальный сервер, слежение
 gulp.task('serve', gulp.series('build', function() {

@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<title>Green Valley &#8211; Главная</title>
 </head>
 <body>
@@ -123,54 +125,17 @@
 <!-- GALLERY -->
 <!-- запихиваем каждую картинку в div для галереи, для того, чтобы вписать картинку с произвольными размерами в блок с определенной w и h -->
 <div class="gallery">
+    <div class="gallery__inner">
 <!-- галерея owl-->
-	<div id="gallery-main-pict"></div>
-	<div id="gallery-thumbs" class="owl-carousel">
-		<div class="gallery__picture">
-			<a href="img/gallery_1.jpg">
-				<img src="img/gallery_1_thumb.jpg" alt="">
-			</a>
-		</div>
-		<div class="gallery__picture">
-			<a href="img/gallery_2.jpg">
-				<img src="img/gallery_2_thumb.jpg" alt="">
-			</a>
-		</div>
-		<div class="gallery__picture">
-			<a href="img/gallery_3.jpg">
-				<img src="img/gallery_3_thumb.jpg" alt="">
-			</a>
-		</div>
-		<div class="gallery__picture">
-			<a href="img/gallery_4.jpg">
-				<img src="img/gallery_4_thumb.jpg" alt="">
-			</a>
-		</div>
-		<div class="gallery__picture">
-			<a href="img/gallery_5.jpg">
-				<img src="img/gallery_5_thumb.jpg" alt="">
-			</a>
-		</div>
-		<div class="gallery__picture">
-			<a href="img/gallery_6.jpg">
-				<img src="img/gallery_6_thumb.jpg" alt="">
-			</a>
-		</div>
-		<div class="gallery__picture">
-			<a href="img/gallery_7.jpg">
-				<img src="img/gallery_7_thumb.jpg" alt="">
-			</a>
-		</div>
-		<div class="gallery__picture">
-			<a href="img/gallery_1.jpg">
-				<img src="img/gallery_1_thumb.jpg" alt="">
-			</a>
-		</div>
-		<div class="gallery__picture">
-			<a href="img/gallery_2.jpg">
-				<img src="img/gallery_2_thumb.jpg" alt="">
-			</a>
-		</div>
+	<div id="gallery-main-pict">
+		<img src="img/gallery_4.jpg" alt="" class="gallery__picture">
+	</div>
+	<div id="gallery-thumbs" class="gallery__gallery-thumbs owl-carousel">
+		<div><a href="img/gallery_1.jpg"><img src="img/gallery_1_thumb.jpg" alt=""></a></div>
+		<div><a href="img/gallery_2.jpg"><img src="img/gallery_2_thumb.jpg" alt=""></a></div>
+		<div><a href="img/gallery_3.jpg"><img src="img/gallery_3_thumb.jpg" alt=""></a></div>
+		<div><a href="img/gallery_4.jpg" id="gallery-start-photo"><img src="img/gallery_4_thumb.jpg" alt=""></a></div>
+		<div><a href="img/gallery_5.jpg"><img src="img/gallery_5_thumb.jpg" alt=""></a></div>
 	</div>
 
 
@@ -189,6 +154,7 @@
 		<div class="gallery__object  gallery__object-small"><img src="" alt="" class="gallery__image"></div>
 		<div class="gallery__object  gallery__object-small"><img src="" alt="" class="gallery__image"></div>
 	</div> -->
+</div>
 </div>
 <!-- /GALLERY -->
 <!-- REVIEWS -->
@@ -343,8 +309,9 @@
 </div>
 <!-- /PAGE-FOOTER -->
 <!-- это скрипт из примера Громова для карусели: -->
-<script src="js/script.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-<script src="src/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js" integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw=" crossorigin="anonymous"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

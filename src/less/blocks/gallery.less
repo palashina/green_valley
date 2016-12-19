@@ -1,32 +1,31 @@
 .gallery {
 
-	&__image {
+	&__inner {
+		padding: 0;
+	}
+
+	&__picture {
 		width: 100%;
 	}
 
-	&__inner-small {
+	&__gallery-thumbs {
 		display: none;
 	}
 
-	&__inner-big {}
-
-	&__object-big {}
-
-	&__image{}
-
-	&__inner-small {}
-
-	&__object-small {}
-
-	&__image{}
-
 	@media (min-width: 768px) {
 
+		&__gallery-thumbs {
+			display: flex;
+		}
 	}
 
 	@media (min-width: 1200px) {
 		margin-left: 110px;
 		margin-right: 110px;
 		text-align: center;
+	}
+
+	&__gallery-thumbs {
+		margin-right: 110px;
 	}
 }

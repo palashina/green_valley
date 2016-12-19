@@ -309,11 +309,17 @@ h5 {
 .rest-type-switcher__options-list {
   display: none;
 }
-.gallery__image {
+.gallery__inner {
+  padding: 0;
+}
+.gallery__picture {
   width: 100%;
 }
-.gallery__inner-small {
+.gallery__gallery-thumbs {
   display: none;
+}
+.gallery__gallery-thumbs {
+  margin-right: 110px;
 }
 .reviews {
   background-image: url(../img/reviews-image.jpg);
@@ -1071,6 +1077,7 @@ h5 {
   .rest-type-switcher__type-inner {
     font-size: 1.125em;
     line-height: 24px;
+    background-color: transparent;
   }
   .rest-type-switcher__type-headline {
     margin-bottom: 40px;
@@ -1119,6 +1126,10 @@ h5 {
     border-radius: 50%;
     width: 100px;
     height: 100px;
+  }
+  .gallery__gallery-thumbs {
+    display: -ms-flexbox;
+    display: flex;
   }
   .reviews__item {
     width: 478px;
@@ -1272,6 +1283,10 @@ h5 {
   }
 }
 @media (min-width: 1200px) {
+  .page-header {
+    display: -ms-flexbox;
+    display: flex;
+  }
   .page-header .main-logo {
     text-align: left;
   }

@@ -10,6 +10,8 @@ const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
 const browserSync = require('browser-sync').create();
 const ghPages = require('gulp-gh-pages');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 
 // ЗАДАЧА: Компиляция препроцессора
 gulp.task('less', function(){
@@ -40,9 +42,20 @@ gulp.task('img', function() {
     .pipe(browserSync.stream());
 });
 
+// ЗАДАЧА: Конкатенация и углификация Javascript
+gulp.task('js', function () {
+  return gulp.src([           // список обрабатываемых файлов
+  'src/js/owl.carousel.js',
+  'src/js/script.js'
+])
+    .pipe(concat('script.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'));
+});
+
 // ЗАДАЧА: Сборка всего
 gulp.task('build', gulp.series(
-  'less', 'html', 'img'
+  'less', 'html', 'img', 'js'
 ));
 
 // Публикация на github-pages
@@ -74,6 +87,11 @@ gulp.task('serve', gulp.series('build', function() {
     'src/img/**/*.*',
     gulp.series('img', reloader)                            // при изменении запускаем компиляцию (обновление браузера — в задаче компиляции)
   );
+
+  gulp.watch(                                               // следим за JS
+    'src/js/**.js',
+    gulp.series('js', reloader)                             // при изменении файлов запускаем пересборку JS и обновление в браузере
+);
 
 }));
 

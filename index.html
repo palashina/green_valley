@@ -25,7 +25,6 @@
 					<li class="main-nav__item"><a class="main-nav__link" href="">контакты</a></li>
 				</ul>
 			</nav>
-			<a href="#" class="main-nav__toggler"><span></span></a>
 		</div>
 		<div class="page-header__contacts">
 			<a href="tel:+78120000000" class="page-header__phone-link">+7 812 777-55-88</a>
@@ -34,32 +33,47 @@
 		<div class="page-header__button">
 			<a href="form.html" class="btn btn--bd-radius  btn--bg-orange  btn--icon-calendar">Забронировать</a>
 		</div>
+		<div class="main-nav__toggler">
+			<a class="main-nav__toggler-link" href="#">
+				<span></span>
+			</a>
+		</div>
 	</div>
 </header>
 <!-- /PAGE-HEADER -->
 <!-- REST-TYPE-SWITCHER -->
 <div class="rest-type-switcher">
+
 	<ul class="rest-type-switcher__tabs">
-		<li class="rest-type-switcher__tab-item  rest-type-switcher__tab-item--active"><a href="#rest-family" class="rest-type-switcher__tab-item-link">Семейный отдых</a></li>
-		<li class="rest-type-switcher__tab-item"><a href="#rest-company" class="rest-type-switcher__tab-item-link">Корпоративный</a></li>
+		<li class="rest-type-switcher__tab-item  rest-type-switcher__is-active">
+			<a href="#rest-family" class="rest-type-switcher__tab-item-link">Семейный отдых</a>
+		</li>
+		<li class="rest-type-switcher__tab-item">
+			<a href="#rest-company" class="rest-type-switcher__tab-item-link">Корпоративный отдых</a>
+		</li>
 	</ul>
+
 	<div class="rest-type-switcher__type">
-		<section id="rest-family" class="rest-type-switcher__type-item  rest-type-switcher__type-item--active">
+
+		<section id="rest-family" class="rest-type-switcher__type-item  rest-type-switcher__is-active">
 			<div class="rest-type-switcher__type-inner">
 				<h1 class="rest-type-switcher__type-headline"><span class="rest-type-switcher__headline-select">Семейный отдых на берегу</span><br><span class="rest-type-switcher__headline-select">Финского залива</span></h1>
 				<p><span class="rest-type-switcher__paragraph-select">Green Valley - это современная база отдыха</span><br><span class="rest-type-switcher__paragraph-select">в курортном районе для здорового отдыха всей семьёй.</span></p>
 			</div>
 		</section>
-		<!-- <section id="rest-company" class="rest-type-switcher__type-item">
+
+		<section id="rest-company" class="rest-type-switcher__type-item">
 			<div class="rest-type-switcher__type-inner">
-				<h1 class="rest-type-switcher__type-headline">Корпоративный отдых на берегу Финского залива</h1>
-				<p>Green Valley - это современная база отдыха в курортном районе для активного отдыха для вас и ваших коллег.</p>
+				<h1 class="rest-type-switcher__type-headline"><span class="rest-type-switcher__headline-select">Корпоративный отдых на берегу</span><br><span class="rest-type-switcher__headline-select">Финского залива</span></h1>
+				<p><span class="rest-type-switcher__paragraph-select">Green Valley - это современная база отдыха</span><br><span class="rest-type-switcher__paragraph-select">в курортном районе для активного отдыха для вас и ваших коллег.</span></p>
 			</div>
-		</section> -->
+		</section>
+
 	</div>
+
 	<div class="rest-type-switcher__options">
+
 		<section class="rest-type-switcher__options-item  rest-type-switcher__options-item--active">
-<!-- Можно задать для этого section id="family-options"-->
 				<h2 class="rest-type-switcher__options-headline">Здоровый отдых</h2>
 				<p>Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. Почувствуйте отдых!</p>
 				<ul class="rest-type-switcher__options-list">
@@ -89,6 +103,7 @@
 					</li>
 				</ul>
 		</section>
+
 		<!-- <section class="rest-type-switcher__options-item">
 				<h2 class="rest-type-switcher__options-headline">Улётный отдых</h2>
 				<p>Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. Почувствуйте отдых!</p>
@@ -125,36 +140,20 @@
 <!-- GALLERY -->
 <!-- запихиваем каждую картинку в div для галереи, для того, чтобы вписать картинку с произвольными размерами в блок с определенной w и h -->
 <div class="gallery">
-    <div class="gallery__inner">
+	<div class="gallery__inner">
 <!-- галерея owl-->
-	<div id="gallery-main-pict">
-		<img src="img/gallery_4.jpg" alt="" class="gallery__picture">
+		<div id="gallery-main-pict">
+			<img src="img/gallery_4.jpg" alt="" class="gallery__picture">
+		</div>
+		<div id="gallery-thumbs" owl-carousel">
+			<div class="gallery__thumb"v><a href="img/gallery_1.jpg"><img src="img/gallery_1_thumb.jpg" alt=""></a></div>
+			<div class="gallery__thumb"><a href="img/gallery_2.jpg"><img src="img/gallery_2_thumb.jpg" alt=""></a></div>
+			<div class="gallery__thumb"><a href="img/gallery_3.jpg"><img src="img/gallery_3_thumb.jpg" alt=""></a></div>
+			<div class="gallery__thumb"><a href="img/gallery_4.jpg" id="gallery-start-photo"><img src="img/gallery_4_thumb.jpg" alt=""></a>
+			</div>
+			<div class="gallery__thumb"><a href="img/gallery_5.jpg"><img src="img/gallery_5_thumb.jpg" alt=""></a></div>
+		</div>
 	</div>
-	<div id="gallery-thumbs" class="gallery__gallery-thumbs owl-carousel">
-		<div><a href="img/gallery_1.jpg"><img src="img/gallery_1_thumb.jpg" alt=""></a></div>
-		<div><a href="img/gallery_2.jpg"><img src="img/gallery_2_thumb.jpg" alt=""></a></div>
-		<div><a href="img/gallery_3.jpg"><img src="img/gallery_3_thumb.jpg" alt=""></a></div>
-		<div><a href="img/gallery_4.jpg" id="gallery-start-photo"><img src="img/gallery_4_thumb.jpg" alt=""></a></div>
-		<div><a href="img/gallery_5.jpg"><img src="img/gallery_5_thumb.jpg" alt=""></a></div>
-	</div>
-
-
-	<!-- <div class="gallery__inner-big">
-		<div class="gallery__object  gallery__object-big  gallery__object-big--active"><img src="img/badroom.jpg" alt="" class="gallery__image"></div>
-	</div>
-	<div class="gallery__inner-small">
-		<div class="gallery__object  gallery__object-small  gallery__object-small--active"><img src="" alt=""></div>
-		<div class="gallery__object  gallery__object-small"><img src="" alt="" class="gallery__image"></div>
-		<div class="gallery__object  gallery__object-small"><img src="" alt="" class="gallery__image"></div>
-		<div class="gallery__object  gallery__object-small"><img src="" alt="" class="gallery__image"></div>
-		<div class="gallery__object  gallery__object-small"><img src="" alt="" class="gallery__image"></div>
-		<div class="gallery__object  gallery__object-small"><img src="" alt="" class="gallery__image"></div>
-		<div class="gallery__object  gallery__object-small"><img src="" alt="" class="gallery__image"></div>
-		<div class="gallery__object  gallery__object-small"><img src="" alt="" class="gallery__image"></div>
-		<div class="gallery__object  gallery__object-small"><img src="" alt="" class="gallery__image"></div>
-		<div class="gallery__object  gallery__object-small"><img src="" alt="" class="gallery__image"></div>
-	</div> -->
-</div>
 </div>
 <!-- /GALLERY -->
 <!-- REVIEWS -->
@@ -308,10 +307,7 @@
 	</div>
 </div>
 <!-- /PAGE-FOOTER -->
-<!-- это скрипт из примера Громова для карусели: -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js" integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw=" crossorigin="anonymous"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/script.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

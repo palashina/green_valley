@@ -1,0 +1,35 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-bus {
+    width: 50px;
+    height: 29px;
+    background-position: -5px -5px;
+}
+
+.sprite-cottage {
+    width: 80px;
+    height: 62px;
+    background-position: -5px -44px;
+}
+
+.sprite-electro {
+    width: 58px;
+    height: 26px;
+    background-position: -65px -5px;
+}
+
+.sprite-hotel {
+    width: 82px;
+    height: 64px;
+    background-position: -133px -5px;
+}
+
+.sprite-icon-calendar {
+    width: 15px;
+    height: 16px;
+    background-position: -95px -79px;
+}

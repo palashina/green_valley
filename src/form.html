@@ -7,7 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
 	<title>Green Valley &#8211; Бронирование</title>
 </head>
 <body>
@@ -44,8 +44,10 @@
 <!-- /PAGE-HEADER -->
 <!-- BOOKING-PROMO-->
 <div class="booking-promo">
-	<h3 class="booking-promo__headline">Бронирование</h3>
-	<p class="booking-promo__about">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <a href="tel:+78120000000" class="booking-promo__phone-link">+7 812 777-55-88</a></p>
+	<div class="booking-promo__inner">
+		<h3 class="booking-promo__headline">Бронирование</h3>
+		<p class="booking-promo__about">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <a href="tel:+78120000000" class="booking-promo__phone-link">+7 812 777-55-88</a></p>
+	</div>
 </div>
 <!-- /BOOKING-PROMO-->
 <!-- BOOKING-FORM -->
@@ -61,7 +63,7 @@
 		<h2 class="booking-form__title">Дата отдыха</h2>
 
 		<div class="booking-form__calendar">
-			<label for="entry-date" class="booking-form__calendar-title">Дата въезда</label>
+			<label for="entry-date" class="booking-form__calendar-title">Дата въезда
 				<div class="booking-form__calendar-inputs-box">
 					<input class="booking-form__calendar-input" type="text" id="calendar-start" placeholder="дата начала отдыха">
 					<span class="booking-form__calendar-field" id="start-day">
@@ -74,7 +76,9 @@
 						<span class="booking-form__calendar-placeholder">гггг</span>
 					</span>
 				</div>
-			<label for="exit-date" class="booking-form__calendar-title">Дата выезда</label>
+			</label>
+<!-- 			<div class="booking-form__calendar-line"></div> -->
+			<label for="exit-date" class="booking-form__calendar-title">Дата выезда
 				<div class="booking-form__calendar-inputs-box">
 
 					<input class="booking-form__calendar-input" type="text" id="calendar-fin" placeholder="дата окончания отдыха">
@@ -88,6 +92,7 @@
 						<span class="booking-form__calendar-placeholder">гггг</span>
 					</span>
 				</div>
+				</label>
 		</div>
 	</div>
 
@@ -97,8 +102,12 @@
 		<legend class="booking-form__step-title">Шаг 2</legend>
 		<h2 class="booking-form__title">Место проживания</h2>
 		<div class="booking-form__place-types">
-			<div class="booking-form__place-type"><input name="place-type" type="radio" value="hotel" checked>Отель</div>
-			<div class="booking-form__place-type"><input name="place-type" type="radio" value="cottage">Коттедж</div>
+			<div class="booking-form__place-type">
+				<input name="place-type" type="radio" value="hotel" checked><label for="place-hotel" class="booking-form__place-hotel">Отель</label>
+			</div>
+			<div class="booking-form__place-type">
+				<input name="place-type" type="radio" value="cottage"><label for="place-cottage" class="booking-form__place-cottage">Коттедж</label>
+			</div>
 		</div>
 	</div>
 <!-- /STEP-TWO -->
@@ -106,49 +115,48 @@
 	<div class="booking-form__step">
 		<legend class="booking-form__step-title">Шаг 3</legend>
 		<h2 class="booking-form__title">Тип коттеджа</h2>
-<!-- внимание: при такой разметке мы не сможем группировать label в один блок, а это, возможно, будет нужно для сетки bootstrap.. и нужно пояснение...-->
 		<div class="booking-form__cottage-types">
 			<label class="booking-form__cottage-type  booking-form__cottage-type--active"><input name="cottage-type" type="radio" value="flagman" checked>флагман</label>
 			<label class="booking-form__cottage-type"><input name="cottage-type" type="radio" value="ozerny">озёрный</label>
 			<label class="booking-form__cottage-type"><input name="cottage-type" type="radio" value="portovy">портовый</label>
 			<label class="booking-form__cottage-type"><input name="cottage-type" type="radio" value="olchovka">ольховка</label>
 		</div>
-		<!-- <div id="flagman" class="booking-form__cottage-options  booking-form__cottage-options--active">
+		<div id="flagman" class="booking-form__cottage-options  booking-form__cottage-options--active">
 			<ul class="booking-form__cottage-options-list">
-				<li>Площадь 100м</li>
-				<li>3 комнаты</li>
-				<li>5 спальных мест</li>
-				<li>раздельный санузел</li>
-				<li>wi-fi</li>
+				<li class="booking-form__option-square">Площадь<br>100м&#178;</li>
+				<li class="booking-form__option-door">3 комнаты</li>
+				<li class="booking-form__option-bed">5 спальных<br>мест</li>
+				<li class="booking-form__option-bathroom">раздельный<br>санузел</li>
+				<li class="booking-form__option-wi-fi">wi-fi</li>
 			</ul>
 		</div>
-		<div id="ozerny" class="booking-form__cottage-options">
-			<ul class="booking-form__cottage-options-list">
-				<li>Площадь 100м</li>
-				<li>3 комнаты</li>
-				<li>5 спальных мест</li>
-				<li>раздельный санузел</li>
-				<li>wi-fi</li>
-			</ul>
-		</div>
-		<div id="portovy" class="booking-form__cottage-options">
-			<ul class="booking-form__cottage-options-list">
-				<li>Площадь 100м</li>
-				<li>3 комнаты</li>
-				<li>5 спальных мест</li>
-				<li>раздельный санузел</li>
-				<li>wi-fi</li>
-			</ul>
-		</div>
-		<div id="olchovka" class="booking-form__cottage-options">
-			<ul class="booking-form__cottage-options-list">
-				<li>Площадь 100м</li>
-				<li>3 комнаты</li>
-				<li>5 спальных мест</li>
-				<li>раздельный санузел</li>
-				<li>wi-fi</li>
-			</ul>
-		</div> -->
+	<div id="ozerny" class="booking-form__cottage-options">
+		<ul class="booking-form__cottage-options-list">
+			<li>Площадь 100м</li>
+			<li>3 комнаты</li>
+			<li>5 спальных мест</li>
+			<li>раздельный санузел</li>
+			<li>wi-fi</li>
+		</ul>
+	</div>
+	<div id="portovy" class="booking-form__cottage-options">
+		<ul class="booking-form__cottage-options-list">
+			<li>Площадь 100м</li>
+			<li>3 комнаты</li>
+			<li>5 спальных мест</li>
+			<li>раздельный санузел</li>
+			<li>wi-fi</li>
+		</ul>
+	</div>
+	<div id="olchovka" class="booking-form__cottage-options">
+		<ul class="booking-form__cottage-options-list">
+			<li>Площадь 100м</li>
+			<li>3 комнаты</li>
+			<li>5 спальных мест</li>
+			<li>раздельный санузел</li>
+			<li>wi-fi</li>
+		</ul>
+	</div>
 	</div>
 <!-- /STEP-THREE -->
 <!-- STEP-FOUR -->
@@ -156,7 +164,7 @@
 		<legend class="booking-form__step-title">Шаг 4</legend>
 		<h2 class="booking-form__title">Персональная информация</h2>
 		<div class="booking-form__person-info">
-			<label for="person-info-name" class="booking-form__person-info-name">
+			<label for="person-info-name" class="booking-form__person-info-name  booking-form__person-info--checked">
 				<input id="person-info-name" type="text" placeholder="имя">
 			</label>
 			<label for="person-info-surname" class="booking-form__person-info-surname">
@@ -164,11 +172,11 @@
 			</label>
 			<label for="person-info-phone" class="booking-form__person-info-phone">
 				<input id="person-info-phone" type="tel" placeholder="номер телефона">
-				<p>Мы свяжемся с вами в случае необходимости.</p>
+				<span>Мы свяжемся с вами в случае необходимости.</span>
 			</label>
 			<label for="person-info-email" class="booking-form__person-info-email">
 				<input id="person-info-email" type="email" placeholder="e-mail">
-			<p>На этот адрес мы вышлем вам подтверждение о забронированном номере.</p>
+			<span>На этот адрес мы вышлем вам подтверждение о забронированном номере.</span>
 			</label>
 		</div>
 	</div>

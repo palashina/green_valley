@@ -1,6 +1,178 @@
 .booking-form {
 
-	&__inner {}
+	@media (min-width: 768px) {
+
+		/*шаг 1*/
+
+		&__calendar {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+
+		&__calendar-title {
+			margin: 0 20px;
+		}
+
+		/*шаг 3*/
+
+		&__cottage-types {
+			flex-direction: row;
+			justify-content: center;
+			padding-top: 45px;
+			padding-bottom: 20px;
+		}
+
+		&__cottage-type {
+			width: 25%;
+		}
+
+		&__cottage-options--active {
+			display: block;
+			padding-top: 85px;
+			margin-top: 20px;
+			background-color: @white;
+		}
+
+		&__cottage-options-list {
+			display: flex;
+			justify-content: center;
+		}
+
+		&__cottage-options-list li {
+			position: relative;
+			width: 20%;
+			text-align: center;
+			list-style-type: none;
+			text-transform: uppercase;
+			color: @grey-darkest;
+			font-size: @font-size--small;
+		}
+
+		&__option-square:before {
+			content: '';
+			position: absolute;
+			background-image: url(../img/spritesheet.png);
+			width: 58px;
+			height: 48px;
+			bottom: 50px;
+			background-position: -172px 102px;
+		}
+
+		&__option-door:before {
+			content: '';
+			position: absolute;
+			text-align: center;
+			background-image: url(../img/spritesheet.png);
+			width: 30px;
+			height: 48px;
+			bottom: 50px;
+			background-position: -130px 0;
+		}
+		&__option-bed:before {
+			content: '';
+			position: absolute;
+			background-image: url(../img/spritesheet.png);
+			width: 58px;
+			height: 48px;
+			bottom: 50px;
+			background-position: -65px -1px;
+		}
+		&__option-bathroom:before {
+			content: '';
+			position: absolute;
+			background-image: url(../img/spritesheet.png);
+			width: 58px;
+			height: 48px;
+			bottom: 50px;
+			background-position: -1px 14px;
+		}
+		&__option-wi-fi:before {
+			content: '';
+			position: absolute;
+			background-image: url(../img/spritesheet.png);
+			width: 58px;
+			height: 48px;
+			bottom: 50px;
+			background-position: -70px 51px;
+		}
+
+		/*шаг 4*/
+
+		&__person-info {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			width: 730px;
+		}
+
+		&__person-info label {
+			display: block;
+		}
+
+		&__person-info span {
+			display: block;
+			width: 360px;
+		}
+
+		&__person-info input {
+			width: 355px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		/*шаг 1*/
+
+		&__calendar {
+			width: 500px;
+			margin: 0 auto;
+			padding: 50px 40px;
+			background-color: @white;
+			border: 1px solid @grey-lighten;
+		}
+
+		&__calendar-title {
+			margin: 0 50px;
+		}
+
+/*вертикальная черта*/
+		// &__calendar-line {
+		// 	display: block;
+		// 	width: 5px;
+		// 	height: 90px;
+		// 	margin: 0;
+		// 	color: red;
+		// 	letter-spacing: 280px;
+		// 	top: 15px;
+		// }
+
+		// &__calendar-line:after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	display: block;
+		// 	width: 5px;
+		// 	height: 90px;
+		// 	margin: 0;
+		// 	color: red;
+		// 	letter-spacing: 280px;
+		// 	top: 15px;
+		// }
+
+		/*шаг 3*/
+
+		&__cottage-types {
+			width: 800px;
+		}
+
+		&__cottage-options--active {
+			width: 800px;
+			margin: 0 auto;
+			margin-top: 25px;
+		}
+
+	}
 
 	&__step {
 		padding: 50px 20px;
@@ -26,6 +198,7 @@
 		color: @grey-darkest;
 	}
 
+/*шаг 1*/
 	&__calendar-title {
 		display: block;
 		text-align: center;
@@ -43,14 +216,14 @@
 		margin: 0 auto;
 		width: 200px;
 		justify-content: space-between;
-		background-color: pink;
+		background-color: @white;
 		margin-top: 18px;
 	}
 
 	&__calendar-input {
-		height: 50px;
-		// width: 200px;
-		border: 1px solid #000;
+		height: 54px;
+		width: 199px;
+		border: 1px solid @grey-lighten;
 		background: transparent;
 
 		.js & {
@@ -71,10 +244,9 @@
 
 	&__calendar-field {
 		display: none;
-		width: 57px;
-		height: 30px;
+		width: 50px;
 		padding: 20px;
-		border: 1px solid #000;
+		border: 1px solid @grey-lighten;
 		overflow: hidden;
 
 		.js & {
@@ -88,29 +260,64 @@
 		text-transform: uppercase;
 	}
 
+/*шаг 2*/
 	&__place-types {
 		display: flex;
 		margin: 0 auto;
+		padding: 25px 10px;
 		width: 280px;
-		height: 160px;
+		height: 140px;
 		border: 1px solid @grey-lighten;
 	}
 
 	&__place-type {
 		width: 50%;
+		margin-top: 5px;
 		font-size: @font-size--small;
 		color: @grey-darken;
 		text-transform: uppercase;
 	}
 
 	&__place-type input {
-		text-decoration: none;
+		display: none;
 	}
 
+	&__place-type label {
+		display: block;
+		text-align: center;
+		position: relative;
+	}
+
+	&__place-hotel:after {
+		content: '';
+		position: absolute;
+		background-image: url(../img/spritesheet.png);
+		width: 84px;
+		height: 65px;
+		top: 35px;
+		right: 30px;
+		background-position: -168px 177px;
+	}
+
+	&__place-cottage:after {
+		content: '';
+		position: absolute;
+		background-image: url(../img/spritesheet.png);
+		width: 84px;
+		height: 65px;
+		top: 35px;
+		right: 30px;
+		background-position: -62px 125px;
+	}
+
+/*шаг 3*/
 	&__cottage-types {
 		display: flex;
 		flex-direction: column;
-		padding-left: 50px;
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 20px;
 		background-color: @white;
 	}
 
@@ -120,6 +327,11 @@
 		text-transform: uppercase;
 		font-size: @font-size--small;
 		letter-spacing: 1px;
+		cursor: pointer;
+	}
+
+	&__cottage-type input {
+		display: none;
 	}
 
 	&__cottage-type--active {
@@ -136,17 +348,28 @@
 		border-left: 4px solid @green-main;
 		border-bottom: 4px solid @green-main;
 		transform: rotate(310deg);
-		left: -17px;
-		right: 370px;
+		left: 88px;
 		top: 0px;
 	}
 
+	&__cottage-options {
+		display: none;
+	}
+
+	&__cottage-options--active {
+		display: none;
+	}
+
+/*шаг 4*/
+
 	&__person-info {
+		margin: 0 auto;
+		width: 282px;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
 
-	&__person-info p {
+	&__person-info span {
 		color: @grey-darken;
 		font-size: @font-size--small;
 	}
@@ -163,9 +386,26 @@
 		text-transform: uppercase;
 	}
 
-	&__payment-variations {
-		padding-left: 40px;
+	&__person-info--active {
+		position: relative;
 	}
+
+	&__person-info--active:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 10px;
+		height: 6px;
+		border-left: 4px solid @green-main;
+		border-bottom: 4px solid @green-main;
+		transform: rotate(310deg);
+		left: 88px;
+		top: 0px;
+	}
+
+/*шаг 5*/
+
+	&__payment-variations {}
 
 	&__payment {
 		margin-bottom: 20px;
@@ -179,6 +419,10 @@
 		color: @grey-darken;
 		font-weight: bold;
 		letter-spacing: 1px;
+	}
+
+	&__payment input {
+		display: none;
 	}
 
 	&__payment a {

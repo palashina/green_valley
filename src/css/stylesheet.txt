@@ -4,32 +4,62 @@
     display: block;
 }
 
+.sprite-bathroom {
+    width: 52px;
+    height: 28px;
+    background-position: -5px -5px;
+}
+
+.sprite-bed {
+    width: 55px;
+    height: 43px;
+    background-position: -67px -5px;
+}
+
 .sprite-bus {
     width: 50px;
     height: 29px;
-    background-position: -5px -5px;
+    background-position: -5px -58px;
 }
 
 .sprite-cottage {
     width: 80px;
     height: 62px;
-    background-position: -5px -44px;
+    background-position: -65px -58px;
+}
+
+.sprite-door {
+    width: 27px;
+    height: 43px;
+    background-position: -132px -5px;
 }
 
 .sprite-electro {
     width: 58px;
     height: 26px;
-    background-position: -65px -5px;
+    background-position: -5px -130px;
 }
 
 .sprite-hotel {
     width: 82px;
     height: 64px;
-    background-position: -133px -5px;
+    background-position: -169px -5px;
 }
 
 .sprite-icon-calendar {
     width: 15px;
     height: 16px;
-    background-position: -95px -79px;
+    background-position: -155px -79px;
+}
+
+.sprite-space {
+    width: 45px;
+    height: 45px;
+    background-position: -180px -79px;
+}
+
+.sprite-wi-fi {
+    width: 50px;
+    height: 42px;
+    background-position: -73px -134px;
 }

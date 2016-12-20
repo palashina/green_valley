@@ -842,7 +842,7 @@ h5 {
   /*шаг 5*/
 }
 .booking-form__step {
-  padding: 50px 20px;
+  padding: 50px 0px;
 }
 .booking-form__inner .booking-form__step:nth-child(2n+1) {
   background-color: #f1f1f1;

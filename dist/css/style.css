@@ -1052,7 +1052,6 @@ h5 {
   margin-bottom: 20px;
   padding-top: 24px;
   padding-bottom: 24px;
-  padding-left: 20px;
   padding-right: 20px;
   background-color: #fff;
   font-size: 14px;
@@ -1061,8 +1060,14 @@ h5 {
   font-weight: bold;
   letter-spacing: 1px;
 }
+.booking-form__payment-info {
+  display: none;
+}
 .booking-form__payment input {
   display: none;
+}
+.booking-form__payment label {
+  padding-left: 50px;
 }
 .booking-form__payment a {
   text-decoration: none;
@@ -1080,7 +1085,7 @@ h5 {
   border-left: 4px solid #ebebeb;
   border-bottom: 4px solid #ebebeb;
   transform: rotate(310deg);
-  left: -17px;
+  left: 21px;
   right: 370px;
   top: 0px;
 }
@@ -1096,7 +1101,7 @@ h5 {
   border-left: 4px solid #0ab89d;
   border-bottom: 4px solid #0ab89d;
   transform: rotate(310deg);
-  left: -17px;
+  left: 21px;
   right: 370px;
   top: 0px;
 }
@@ -1104,11 +1109,12 @@ h5 {
   padding-top: 40px;
   padding-bottom: 25px;
   background-color: #fff;
-  padding-left: 40px;
+  padding-left: 20px;
   font-size: 14px;
 }
 .booking-form__pay-now label {
   text-transform: uppercase;
+  font-weight: normal;
   color: #4c4c4c;
 }
 .booking-form__pay-now input {
@@ -1122,9 +1128,17 @@ h5 {
   text-transform: uppercase;
   color: #979696;
 }
+.booking-form__pay-now #cvv-code {
+  width: 135px;
+}
+.booking-form__pay-now #cart-valid {
+  width: 135px;
+}
 .booking-form__for-payment {
   text-align: center;
+  padding: 25px 0;
   color: #4c4c4c;
+  background-color: #fff;
 }
 .booking-form__for-payment-title {
   text-transform: uppercase;
@@ -1167,6 +1181,7 @@ h5 {
 }
 .booking-form__button-submit {
   background-color: #f1f1f1;
+  margin-top: 50px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 80px;
@@ -1411,7 +1426,7 @@ h5 {
     padding: 0;
     text-align: center;
   }
-  .booking-form {/*шаг 1*//*шаг 3*//*шаг 4*/
+  .booking-form {/*шаг 1*//*шаг 3*//*шаг 4*//*шаг 5*/
   }
   .booking-form__calendar {
     display: -ms-flexbox;
@@ -1521,6 +1536,46 @@ h5 {
   }
   .booking-form__person-info input {
     width: 355px;
+  }
+  .booking-form__flex-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+  .booking-form__payment-info {
+    display: inline;
+    color: #4c4c4c;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+  }
+  .booking-form__payments {
+    -ms-flex-preferred-size: 64%;
+    flex-basis: 64%;
+  }
+  .booking-form__for-payment {
+    -ms-flex-preferred-size: 36%;
+    flex-basis: 36%;
+    margin-right: 18px;
+    padding-bottom: 0;
+  }
+  .booking-form__payment {
+    margin-bottom: 18px;
+    padding-bottom: 0;
+  }
+  .booking-form__pay-now {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .booking-form__pay-now-flex {
+    margin: 0 15px;
+  }
+  .booking-form__button-submit {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -1662,7 +1717,7 @@ h5 {
     margin-left: 110px;
     margin-right: 110px;
   }
-  .booking-form {/*шаг 1*//*вертикальная черта*//*шаг 3*/
+  .booking-form {/*шаг 1*//*шаг 3*//*шаг 5*/
   }
   .booking-form__calendar {
     width: 500px;
@@ -1681,6 +1736,15 @@ h5 {
     width: 800px;
     margin: 0 auto;
     margin-top: 25px;
+  }
+  .booking-form__flex-wrapper {
+    width: 800px;
+    margin: 0 auto;
+  }
+  .booking-form__button-submit {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 35px;
   }
 }
 

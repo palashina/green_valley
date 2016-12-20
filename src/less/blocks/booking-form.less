@@ -119,6 +119,50 @@
 		&__person-info input {
 			width: 355px;
 		}
+
+		/*шаг 5*/
+
+		&__flex-wrapper {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+
+		&__payment-info {
+			display: inline;
+			color: @grey-darken;
+			font-size: @font-size--small;
+			font-weight: normal;
+			text-transform: none;
+		}
+
+		&__payments {
+			flex-basis: 64%;
+		}
+
+		&__for-payment {
+			flex-basis: 36%;
+			margin-right: 18px;
+			padding-bottom: 0;
+		}
+
+		&__payment {
+			margin-bottom: 18px;
+			padding-bottom: 0;
+		}
+
+		&__pay-now {
+			display: flex;
+			justify-content: center;
+		}
+
+		&__pay-now-flex {
+			margin: 0 15px;
+		}
+
+		&__button-submit {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 
 	@media (min-width: 1200px) {
@@ -137,29 +181,6 @@
 			margin: 0 50px;
 		}
 
-/*вертикальная черта*/
-		// &__calendar-line {
-		// 	display: block;
-		// 	width: 5px;
-		// 	height: 90px;
-		// 	margin: 0;
-		// 	color: red;
-		// 	letter-spacing: 280px;
-		// 	top: 15px;
-		// }
-
-		// &__calendar-line:after {
-		// 	content: '';
-		// 	position: absolute;
-		// 	display: block;
-		// 	width: 5px;
-		// 	height: 90px;
-		// 	margin: 0;
-		// 	color: red;
-		// 	letter-spacing: 280px;
-		// 	top: 15px;
-		// }
-
 		/*шаг 3*/
 
 		&__cottage-types {
@@ -170,6 +191,19 @@
 			width: 800px;
 			margin: 0 auto;
 			margin-top: 25px;
+		}
+
+		/*шаг 5*/
+
+		&__flex-wrapper {
+			width: 800px;
+			margin: 0 auto;
+		}
+
+		&__button-submit {
+			width: 800px;
+			margin: 0 auto;
+			margin-top: 35px;
 		}
 
 	}
@@ -405,13 +439,10 @@
 
 /*шаг 5*/
 
-	&__payment-variations {}
-
 	&__payment {
 		margin-bottom: 20px;
 		padding-top: 24px;
 		padding-bottom: 24px;
-		padding-left: 20px;
 		padding-right: 20px;
 		background-color: @white;
 		font-size: @font-size--small;
@@ -421,8 +452,16 @@
 		letter-spacing: 1px;
 	}
 
+	&__payment-info {
+		display: none;
+	}
+
 	&__payment input {
 		display: none;
+	}
+
+	&__payment label {
+		padding-left: 50px;
 	}
 
 	&__payment a {
@@ -443,7 +482,7 @@
 		border-left: 4px solid @grey-lighten;
 		border-bottom: 4px solid @grey-lighten;
 		transform: rotate(310deg);
-		left: -17px;
+		left: 21px;
 		right: 370px;
 		top: 0px;
 	}
@@ -463,7 +502,7 @@
 		border-left: 4px solid @green-main;
 		border-bottom: 4px solid @green-main;
 		transform: rotate(310deg);
-		left: -17px;
+		left: 21px;
 		right: 370px;
 		top: 0px;
 	}
@@ -472,12 +511,13 @@
 		padding-top: 40px;
 		padding-bottom: 25px;
 		background-color: @white;
-		padding-left: 40px;
+		padding-left: 20px;
 		font-size: @font-size--small;
 	}
 
 	&__pay-now label {
 		text-transform: uppercase;
+		font-weight: normal;
 		color: @grey-darken;
 	}
 
@@ -493,9 +533,19 @@
 		color: @grey-main;
 	}
 
+	&__pay-now #cvv-code {
+		width: 135px;
+	}
+
+	&__pay-now #cart-valid {
+		width: 135px;
+	}
+
 	&__for-payment {
 		text-align: center;
+		padding: 25px 0;
 		color: @grey-darken;
+		background-color: @white;
 	}
 
 	&__for-payment-title {
@@ -547,6 +597,7 @@
 
 	&__button-submit {
 		background-color: @grey-cold-cream;
+		margin-top: 50px;
 		padding-left: 20px;
 		padding-right: 20px;
 		padding-bottom: 80px;

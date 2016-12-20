@@ -32,6 +32,7 @@ var tabs = document.querySelectorAll('.rest-type-switcher__tabs .rest-type-switc
 var restType = document.querySelectorAll('.rest-type-switcher__type .rest-type-switcher__type-item');
 
 function changeTab(event) {
+  event.preventDefault();
   for (var i=0; i<tabs.length; i++) {
     tabs[i].parentNode.classList.remove('rest-type-switcher__is-active');
   }
@@ -49,35 +50,35 @@ for (var i=0; i<tabs.length; i++) {
 }
 
 /*календарь*/
-  //   var
-  //     from = $( "#calendar-start" ).datepicker()
-  //       .on( "change", function() {
-  //         to.datepicker( "option", "minDate", getDate( this ) );
-  //         var date = $(this).datepicker('getDate');
-  //         $( "#start-day" ).text( date.getDate() );
-  //         $( "#start-month" ).text( date.getMonth() + 1 );
-  //         $( "#start-year" ).text( date.getFullYear() );
-  //       }),
-  //     to = $( "#calendar-fin" ).datepicker()
-  //       .on( "change", function() {
-  //         from.datepicker( "option", "maxDate", getDate( this ) );
-  //         var date = $(this).datepicker('getDate');
-  //         $( "#fin-day" ).text( date.getDate() );
-  //         $( "#fin-month" ).text( date.getMonth() + 1 );
-  //         $( "#fin-year" ).text( date.getFullYear() );
-  //       });
+    var
+      from = $( "#calendar-start" ).datepicker()
+        .on( "change", function() {
+          to.datepicker( "option", "minDate", getDate( this ) );
+          var date = $(this).datepicker('getDate');
+          $( "#start-day" ).text( date.getDate() );
+          $( "#start-month" ).text( date.getMonth() + 1 );
+          $( "#start-year" ).text( date.getFullYear() );
+        }),
+      to = $( "#calendar-fin" ).datepicker()
+        .on( "change", function() {
+          from.datepicker( "option", "maxDate", getDate( this ) );
+          var date = $(this).datepicker('getDate');
+          $( "#fin-day" ).text( date.getDate() );
+          $( "#fin-month" ).text( date.getMonth() + 1 );
+          $( "#fin-year" ).text( date.getFullYear() );
+        });
 
-  //   function getDate( element ) {
-  //     var date;
-  //     try {
-  //       date = $.datepicker.parseDate( "mm/dd/yy", element.value );
-  //     } catch( error ) {
-  //       date = null;
-  //     }
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate( "mm/dd/yy", element.value );
+      } catch( error ) {
+        date = null;
+      }
 
-  //     return date;
-  //   }
-  // });
+      return date;
+    }
+
 
 });
 

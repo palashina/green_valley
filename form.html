@@ -186,49 +186,63 @@
 		<legend class="booking-form__step-title">Шаг 5</legend>
 		<h2 class="booking-form__title">Способ оплаты</h2>
 
-		<div class="booking-form__payment-variations">
+		 <div class="booking-form__flex-wrapper">
+
+		   <div class="booking-form__payments">
 
 			<div class="booking-form__payment">
 				<label for="" class="booking-form__payment-non-checked"><input name="payment-type" type="radio" value="arrival" checked>По приезду</label>
+				<span class="booking-form__payment-info">Вы можете произвести оплату по факту заселения</span>
 			</div>
 
 			<div class="booking-form__payment  booking-form__payment--active">
 				<a href="#pay-now">
-				<label for="" class="booking-form__payment-checked"><input name="payment-type" type="radio" value="now">Сейчас</label>
+					<label for="" class="booking-form__payment-checked"><input name="payment-type" type="radio" value="now">Сейчас</label>
+					<span class="booking-form__payment-info">Прямо сейчас вы можете произвести оплату с помощью банковской карты</span>
 				</a>
+
+				<div id="pay-now" class="booking-form__pay-now">
+
+				<div class="booking-form__pay-now-flex">
+					<label for="cart-number">номер карты
+						<input id="cart-number" type="number" placeholder="0000-0000-0000-0000">
+					</label>
+					<label for="name-cartholder">фамилия владельца карты
+						<input id="name-cartholder" type="text" placeholder="vladimir vladimirov">
+					</label>
+				</div>
+				<div class="booking-form__pay-now-flex">
+					<label for="cvv-code">код cvv
+						<input id="cvv-code" type="number" placeholder="123">
+					</label>
+					<label for="cart-valid">действует до
+						<input id="cart-valid" name="calendar" placeholder="01 / 2018">
+					</label>
+				</div>
+				</div>
+
 			</div>
 
-		</div>
+			</div>
 
-		<div id="pay-now" class="booking-form__pay-now">
-			<label for="cart-number">номер карты
-				<input id="cart-number" type="number" placeholder="0000-0000-0000-0000">
-			</label>
-			<label for="name-cartholder">фамилия владельца карты
-				<input id="name-cartholder" type="text" placeholder="vladimir vladimirov">
-			</label>
-			<label for="cvv-code">код cvv
-				<input id="cvv-code" type="number" placeholder="123">
-			</label>
-			<label for="cart-valid">действует до
-				<input id="cart-valid" name="calendar" placeholder="01 / 2018">
-			</label>
-		</div>
 
-<!-- обратить внимание на классы внизу!! не перепутать. чёрточка стилизована так же как цена в случае success-->
-		<div class="booking-form__for-payment">
-			<p class="booking-form__for-payment-title">к оплате</p>
+
+			<div class="booking-form__for-payment">
+				<p class="booking-form__for-payment-title">к оплате</p>
 <!-- 			<div class="booking-form__for-payment-price-success">14 000 руб.</div> -->
-			<div class="booking-form__for-payment-price-error--active">
-				<p class="booking-form__for-payment-price-no-price">-</p>
-				<p class="booking-form__for-payment-choose-date">Пожалуйста, <a href="#choose-date-again" class="booking-form__for-payment-choose">выберите дату</a> въезда и выезда, чтобы увидеть сумму к оплате</p>
+				<div class="booking-form__for-payment-price-error--active">
+					<p class="booking-form__for-payment-price-no-price">-</p>
+					<p class="booking-form__for-payment-choose-date">Пожалуйста, <a href="#choose-date-again" class="booking-form__for-payment-choose">выберите дату</a> въезда и выезда, чтобы увидеть сумму к оплате</p>
+				</div>
+			</div>
+
+
+			</div>
+			<div class="booking-form__button-submit">
+				<input class="btn btn--bg-greener" type="submit" value="Забронировать">
 			</div>
 		</div>
-	</div>
 <!-- STEP-FIVE -->
-	<div class="booking-form__button-submit">
-		<input class="btn btn--bg-greener" type="submit" value="Забронировать">
-	</div>
   </div>
 </form>
 <!-- /BOOKING-FORM -->
@@ -254,5 +268,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 <script>document.documentElement.className +='js';</script>
 <script src="js/script.min.js"></script>
-</body>
 </html>

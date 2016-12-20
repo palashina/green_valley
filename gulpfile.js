@@ -45,7 +45,6 @@ gulp.task('img', function() {
 // ЗАДАЧА: Конкатенация и углификация Javascript
 gulp.task('js', function () {
   return gulp.src([           // список обрабатываемых файлов
-  // 'src/js/owl.carousel.js',
   'src/js/script.js'
 ])
     .pipe(concat('script.min.js'))

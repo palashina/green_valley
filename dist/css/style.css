@@ -774,6 +774,7 @@ h5 {
 }
 .other-room-type {
   width: 280px;
+  margin: 0 auto;
   margin-top: 18px;
   border: 1px solid #139985;
 }
@@ -1399,9 +1400,20 @@ h5 {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
   }
+  .single-room__facts-items-flex {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: left;
+    justify-content: left;
+  }
+  .single-room__facts-flex-wrapper {
+    margin-right: 90px;
+  }
   .other-rooms__inner {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .other-room-type {
     width: 353px;
@@ -1716,6 +1728,24 @@ h5 {
   .page-footer__inner {
     margin-left: 110px;
     margin-right: 110px;
+  }
+  .single-room__inner {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .single-room__info-flex-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+  .single-room__image-box {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+  .single-room__about {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
   }
   .booking-form {/*шаг 1*//*шаг 3*//*шаг 5*/
   }

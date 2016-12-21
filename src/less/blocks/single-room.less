@@ -1,6 +1,37 @@
 .single-room {
 
-	@media (min-width: 768px) {}
+	@media (min-width: 768px) {
+
+		&__facts-items-flex {
+			display: flex;
+			justify-content: left;
+		}
+
+		&__facts-flex-wrapper {
+			margin-right: 90px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		&__inner {
+			margin-left: 80px;
+			margin-right: 80px;
+		}
+
+		&__info-flex-wrapper {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+
+		&__image-box {
+			flex-basis: 50%;
+		}
+
+		&__about {
+			flex-basis: 50%;
+		}
+	}
 
 	&__inner {
 		padding-top: 50px;

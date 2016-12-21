@@ -218,9 +218,6 @@ h5 {
 .main-nav {
   /*включение вертикального меню в моб. и планш.*/
 }
-.main-nav__nav {
-  display: none;
-}
 .main-nav__toggler {
   display: inline-block;
   position: absolute;
@@ -254,9 +251,31 @@ h5 {
 .main-nav__toggler-link span:before {
   top: 9px;
 }
+.main-nav__nav {
+  display: none;
+  font-size: 14px;
+  line-height: 3.125rem;
+}
 .main-nav__list {
   margin: 0 auto;
   padding: 0;
+}
+.main-nav__item {
+  text-align: center;
+  list-style-type: none;
+  border: 1px solid #ebebeb;
+}
+.main-nav__item:last-child {
+  margin-right: 0;
+}
+.main-nav__link {
+  text-decoration: none;
+  color: #191919;
+  text-transform: uppercase;
+}
+.main-nav__link:hover {
+  color: #e85715;
+  transition-duration: 0.5s;
 }
 .rest-type-switcher {
   position: relative;
@@ -368,6 +387,9 @@ h5 {
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 50px;
+}
+.reviews__toggle-items {
+  display: none;
 }
 .reviews__inner {
   padding-top: 70px;
@@ -1649,6 +1671,7 @@ h5 {
   .main-nav__item {
     margin-right: 20px;
     list-style-type: none;
+    border: none;
   }
   .main-nav__item:last-child {
     margin-right: 0;

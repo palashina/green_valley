@@ -27,6 +27,7 @@
 		&__item {
 			margin-right: 20px;
 			list-style-type: none;
+			border: none;
 		}
 
 		&__item:last-child {
@@ -46,11 +47,6 @@
 		&__toggler {
 			display: none;
 		}
-	}
-
-/*включение вертикального меню в моб. и планш.*/
-	&__nav {
-		display: none;
 	}
 
 	&__toggler {
@@ -90,36 +86,36 @@
 		top: 9px;
 	}
 
-	// &__nav {
-	//     font-size: @font-size--small;
-	//     line-height: 3.125rem;
-	// }
+	/*включение вертикального меню в моб. и планш.*/
+	&__nav {
+		display: none;
+		font-size: @font-size--small;
+		line-height: 3.125rem;
+	}
 
 	&__list {
 		margin: 0 auto;
 		padding: 0;
 	}
 
-	// &__item {
-	// 	text-align: center;
-	//  list-style-type: none;
-	//  border: 1px solid @grey-lighten;
-	// }
+	&__item {
+		text-align: center;
+		list-style-type: none;
+		border: 1px solid @grey-lighten;
+	}
 
-	// &__item:last-child {
-	//  margin-right: 0;
-	// }
+	&__item:last-child {
+		margin-right: 0;
+	}
 
-	// &__link {
-	//  text-decoration: none;
-	//  color: @grey-darkest;
-	//  text-transform: uppercase;
-	// }
+	&__link {
+		text-decoration: none;
+		color: @grey-darkest;
+		text-transform: uppercase;
+	}
 
-	// &__link:hover {
-	//  color: @orange-main;
-	//  transition-duration: 0.5s;
-	// }
-
-
+	&__link:hover {
+		color: @orange-main;
+		transition-duration: 0.5s;
+	}
 }

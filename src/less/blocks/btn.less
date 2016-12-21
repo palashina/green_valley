@@ -40,10 +40,20 @@
 	}
 
 	&--icon-calendar {
+		position: relative;
 		padding-left: 50px;
 	}
 
-	&--icon-calendar:before {}
+	&--icon-calendar:before {
+		content: '';
+		position: absolute;
+		bottom: 14px;
+		left: 29px;
+		background-image: url(../img/spritesheet.png);
+		width: 17px;
+		height: 17px;
+		background-position: -153px 103px;
+	}
 
 	&--bg-greener {
 		width: 100%;

@@ -128,7 +128,8 @@
 		}
 
 		&__payment-info {
-			display: inline;
+			display: block;
+			flex-basis: 70%;
 			color: @grey-darken;
 			font-size: @font-size--small;
 			font-weight: normal;
@@ -148,6 +149,15 @@
 		&__payment {
 			margin-bottom: 18px;
 			padding-bottom: 0;
+		}
+
+		&__paragraph-flex {
+			display: flex;
+			align-items: baseline;
+		}
+
+		&__paragraph-flex label {
+			flex-basis: 30%;
 		}
 
 		&__pay-now {
@@ -521,6 +531,10 @@
 		color: @grey-darken;
 	}
 
+	&__pay-now-flex label {
+		padding-left: 0;
+	}
+
 	&__pay-now input {
 		display: block;
 		margin-top: 15px;
@@ -553,6 +567,7 @@
 	}
 
 	&__for-payment-price-success {
+		display: none;
 		text-transform: uppercase;
 		font-size: 1.5em;
 		color: @grey-darkest;

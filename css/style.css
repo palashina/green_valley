@@ -490,7 +490,18 @@ h5 {
   transition-duration: 0.25s;
 }
 .btn--icon-calendar {
+  position: relative;
   padding-left: 50px;
+}
+.btn--icon-calendar:before {
+  content: '';
+  position: absolute;
+  bottom: 14px;
+  left: 29px;
+  background-image: url(../img/spritesheet.png);
+  width: 17px;
+  height: 17px;
+  background-position: -153px 103px;
 }
 .btn--bg-greener {
   width: 100%;
@@ -796,6 +807,9 @@ h5 {
 }
 .other-rooms__inner .other-room-type {
   border: 1px solid #e3e3e3;
+}
+.other-rooms__inner .other-room-type:nth-child(3) {
+  display: none;
 }
 .other-room-type {
   width: 280px;
@@ -1143,6 +1157,9 @@ h5 {
   font-weight: normal;
   color: #4c4c4c;
 }
+.booking-form__pay-now-flex label {
+  padding-left: 0;
+}
 .booking-form__pay-now input {
   display: block;
   margin-top: 15px;
@@ -1170,6 +1187,7 @@ h5 {
   text-transform: uppercase;
 }
 .booking-form__for-payment-price-success {
+  display: none;
   text-transform: uppercase;
   font-size: 1.5em;
   color: #191919;
@@ -1581,7 +1599,9 @@ h5 {
     flex-direction: row-reverse;
   }
   .booking-form__payment-info {
-    display: inline;
+    display: block;
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%;
     color: #4c4c4c;
     font-size: 14px;
     font-weight: normal;
@@ -1600,6 +1620,16 @@ h5 {
   .booking-form__payment {
     margin-bottom: 18px;
     padding-bottom: 0;
+  }
+  .booking-form__paragraph-flex {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+  .booking-form__paragraph-flex label {
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
   }
   .booking-form__pay-now {
     display: -ms-flexbox;
@@ -1801,6 +1831,9 @@ h5 {
   .single-room__about {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
+  }
+  .other-rooms__inner .other-room-type:nth-child(3) {
+    display: block;
   }
   .booking-form {/*шаг 1*//*шаг 3*//*шаг 5*/
   }

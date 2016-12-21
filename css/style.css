@@ -720,6 +720,9 @@ h5 {
   border: none;
   transition-duration: 0.35s;
 }
+.room-type__flex-image-box {
+  display: none;
+}
 .single-room__inner {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1751,6 +1754,35 @@ h5 {
   .page-footer__inner {
     margin-left: 110px;
     margin-right: 110px;
+  }
+  .room-type {
+    display: -ms-flexbox;
+    display: flex;
+    width: 1180px;
+    padding: 0;
+  }
+  .room-type__image-box {
+    display: none;
+    width: 580px;
+  }
+  .room-type__flex-box-description {
+    -ms-flex-preferred-size: 53%;
+    flex-basis: 53%;
+  }
+  .room-type__flex-image-box {
+    display: block;
+    -ms-flex-preferred-size: 47%;
+    flex-basis: 47%;
+  }
+  .room-type__description {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .room-type__title {
+    margin-top: 40px;
+  }
+  .room-type__all-buttons {
+    margin-left: 80px;
   }
   .single-room__inner {
     margin-left: 80px;

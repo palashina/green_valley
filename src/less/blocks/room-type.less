@@ -45,12 +45,36 @@
 	}
 
 	@media (min-width: 1200px) {
-		// width: 1180px;
-		// display: flex;
+		display: flex;
+		width: 1180px;
+		padding: 0;
 
-		// &__image-box {
-		// 	flex-grow: 4;
-		// }
+		&__image-box {
+			display: none;
+			width: 580px;
+		}
+
+		&__flex-box-description {
+			flex-basis: 53%;
+		}
+
+		&__flex-image-box {
+			display: block;
+			flex-basis: 47%;
+		}
+
+		&__description {
+			margin-left: 80px;
+			margin-right: 80px;
+		}
+
+		&__title {
+			margin-top: 40px;
+		}
+
+		&__all-buttons {
+			margin-left: 80px;
+		}
 	}
 
 	&__title {
@@ -110,5 +134,9 @@
 	&__more:hover {
 		border: none;
 		transition-duration: 0.35s;
+	}
+
+	&__flex-image-box {
+		display: none;
 	}
 }

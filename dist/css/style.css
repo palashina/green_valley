@@ -315,7 +315,7 @@ h5 {
   position: absolute;
   top: 480px;
   left: 50%;
-  margin-left: -155px;
+  margin-left: -186px;
 }
 .rest-type-switcher__tab-item {
   display: inline-block;
@@ -327,6 +327,20 @@ h5 {
 }
 .rest-type-switcher__tab-item--active {
   color: #ff7435;
+}
+.rest-type-switcher__is-active a {
+  color: #e85715;
+}
+.rest-type-switcher__is-active a:after {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 40px;
+  top: 20px;
+  width: 30px;
+  height: 2px;
+  background-color: #e85715;
+  transition-duration: 0.5s;
 }
 .rest-type-switcher__tab-item-link {
   position: relative;
@@ -385,6 +399,11 @@ h5 {
 .gallery__thumb {
   width: 100%;
   text-align: center;
+  opacity: 0.8;
+}
+.gallery__thumb:hover {
+  opacity: 1;
+  transition-duration: 0.2s;
 }
 .reviews {
   background-image: url(../img/reviews-image.jpg);
@@ -548,6 +567,25 @@ h5 {
 .discounts__item-inner-about {
   font-size: 16px;
   color: #191919;
+}
+.discounts .owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.discounts .owl-dot {
+  display: inline-block;
+  margin-right: 20px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ff7435;
+  border-radius: 50%;
+}
+.discounts .owl-dot:last-child {
+  margin-right: 0;
+}
+.discounts .owl-dot.active,
+.discounts .owl-dot:hover {
+  background-color: #ff7435;
 }
 .location {
   padding-bottom: 47px;
@@ -1046,8 +1084,7 @@ h5 {
   border-left: 4px solid #0ab89d;
   border-bottom: 4px solid #0ab89d;
   transform: rotate(310deg);
-  left: 88px;
-  top: 0px;
+  left: 20%;
 }
 .booking-form__cottage-options {
   display: none;
@@ -1201,8 +1238,8 @@ h5 {
   font-size: 1.5em;
 }
 .booking-form__for-payment-choose-date {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-size: 14px;
   color: #4c4c4c;
 }
@@ -1499,7 +1536,20 @@ h5 {
     border: 1px solid #ebebeb;
   }
   .booking-form__cottage-type {
+    position: relative;
     width: 25%;
+  }
+  .booking-form__cottage-type:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 90px;
+    color: #f1f1f1;
+    right: 20px;
+  }
+  .booking-form__cottage-type--active:before {
+    left: 45%;
+    top: 20px;
   }
   .booking-form__cottage-options--active {
     display: block;

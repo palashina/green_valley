@@ -106,17 +106,6 @@
 			margin-right: 200px;
 			padding-bottom: 50px;
 		}
-
-	// 	&__options-headline {
-	// 		font-size: @font-size--biggest;
-	// 		line-height: 1.375em;
-	// 		letter-spacing: 2px;
-	// 		font-weight: normal;
-	// 	}
-
-	// 	&__option-text {}
-
-	// 	&__option-pict {}
 	}
 
 	&__type {
@@ -160,7 +149,7 @@
 		position: absolute;
 		top: 480px;
 		left: 50%;
-		margin-left: -155px;
+		margin-left: -186px;
 	}
 
 	&__tab-item {
@@ -175,6 +164,22 @@
 
 	&__tab-item--active {
 		color: @orange-lighten;
+	}
+
+	&__is-active a {
+		color: @orange-main;
+	}
+
+	&__is-active a:after {
+		position: absolute;
+		content: '';
+		display: block;
+		left: 40px;
+		top: 20px;
+		width: 30px;
+		height: 2px;
+		background-color: @orange-main;
+		transition-duration: 0.5s;
 	}
 
 	&__tab-item-link {
@@ -202,10 +207,6 @@
 		background-color: @orange-main;
 		transition-duration: 0.5s;
 	}
-
-	&__type {}
-
-	&__type-inner {}
 
 	&__options {
 		background-image: url(../img/rest-type-opt-health.png);

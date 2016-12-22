@@ -1,5 +1,46 @@
 .discounts {
 
+	@media (min-width: 768px) {
+
+		&__headline {
+			font-size: @font-size--biggest;
+		}
+
+		&__item {
+			background-image: url(../img/discounts-image-medium.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 0 -100px;
+		}
+
+		&__item-inner-title {
+			font-size: 1.125em;
+		}
+
+		&__item-inner-about {
+			font-size: @font-size;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		&__inner {
+			width: 1170px;
+			margin: 0 auto;
+		}
+
+		&__item {
+			background-image: url(../img/discounts-image-big.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 0 -180px;
+		}
+
+		&__item-inner-title {
+			font-size: @font-size--small;
+		}
+	}
+
 	&__headline {
 		padding-top: 50px;
 		text-align: center;
@@ -40,44 +81,22 @@
 		color: @grey-darkest;
 	}
 
-	@media (min-width: 768px) {
-
-		&__headline {
-			font-size: @font-size--biggest;
-		}
-
-		&__item {
-			background-image: url(../img/discounts-image-medium.jpg);
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: 0 -100px;
-		}
-
-		&__item-inner-title {
-			font-size: 1.125em;
-		}
-
-		&__item-inner-about {
-			font-size: @font-size;
-		}
+	.owl-dots {
+		text-align: center;
+		margin-top: 20px;
 	}
-
-	@media (min-width: 1200px) {
-
-		&__inner {
-			width: 1170px;
-			margin: 0 auto;
+	.owl-dot {
+		display: inline-block;
+		margin-right: 20px;
+		width: 15px;
+		height: 15px;
+		border: 2px solid @orange-lighten;
+		border-radius: 50%;
+		&:last-child {
+			margin-right: 0;
 		}
-
-		&__item {
-			background-image: url(../img/discounts-image-big.jpg);
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: 0 -180px;
-		}
-
-		&__item-inner-title {
-			font-size: @font-size--small;
+		&.active, &:hover {
+			background-color: @orange-lighten;
 		}
 	}
 }

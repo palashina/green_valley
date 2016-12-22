@@ -67,6 +67,29 @@ $('#all-reviews').click(function(e) {
   $('.reviews__toggle-items').slideToggle(800);
 });
 
+/*главная: галерея акции*/
+
+$('#discounts-thumbs').owlCarousel({
+    items: 1,
+    nav: false
+  });
+
+/*страница номера, галерея*/
+
+$('#single-room__gallery').owlCarousel({
+  items: 1,
+  nav: true,
+  dots: false
+});
+// $(".fancybox").fancybox();
+
+// $('#single-room__gallery').owlCarousel({
+//     items: 1,
+//     nav: true,
+//     dots: false
+//   });
+//   $(".fancybox").fancybox();
+
 /*календарь*/
     var
       from = $( "#calendar-start" ).datepicker()

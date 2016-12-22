@@ -25,7 +25,22 @@
 		}
 
 		&__cottage-type {
+			position: relative;
 			width: 25%;
+		}
+
+		&__cottage-type:after {
+			position: absolute;
+			content: '';
+			width: 1px;
+			height: 90px;
+			color: @grey-cold-cream;
+			right: 20px;
+		}
+
+		&__cottage-type--active:before {
+			left: 45%;
+			top: 20px;
 		}
 
 		&__cottage-options--active {
@@ -395,8 +410,7 @@
 		border-left: 4px solid @green-main;
 		border-bottom: 4px solid @green-main;
 		transform: rotate(310deg);
-		left: 88px;
-		top: 0px;
+		left: 20%;
 	}
 
 	&__cottage-options {
@@ -500,8 +514,6 @@
 		top: 0px;
 	}
 
-	&__payment--active {}
-
 	&__payment-checked {
 		position: relative;
 	}
@@ -583,8 +595,8 @@
 	}
 
 	&__for-payment-choose-date {
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 30px;
+		padding-right: 30px;
 		font-size: @font-size--small;
 		color: @grey-darken;
 	}

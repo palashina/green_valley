@@ -2,32 +2,29 @@
 
 	@media (min-width: 768px) {
 
-		#gallery-thumbs {
-			display: flex;
+		#gallery-main-pict {
+			display: block;
 		}
-
-		&__thumb {
-			display: inline-block;
-		}
-
 	}
 
 	@media (min-width: 1200px) {
 
-		margin-left: 110px;
-		margin-right: 110px;
-		text-align: center;
-
 		&__inner {
-			padding: 0;
+			margin-left: 110px;
+			margin-right: 110px;
 		}
 	}
 
-	&__picture {
+	&__inner {
 		width: 100%;
 	}
 
-	#gallery-thumbs {
+	#gallery-main-pict {
 		display: none;
+	}
+
+	&__thumb {
+		width: 100%;
+		text-align: center;
 	}
 }

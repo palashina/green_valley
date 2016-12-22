@@ -376,11 +376,15 @@ h5 {
 .rest-type-switcher__options-list {
   display: none;
 }
-.gallery__picture {
+.gallery__inner {
   width: 100%;
 }
-.gallery #gallery-thumbs {
+.gallery #gallery-main-pict {
   display: none;
+}
+.gallery__thumb {
+  width: 100%;
+  text-align: center;
 }
 .reviews {
   background-image: url(../img/reviews-image.jpg);
@@ -1312,12 +1316,8 @@ h5 {
     text-transform: uppercase;
     color: #191919;
   }
-  .gallery #gallery-thumbs {
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .gallery__thumb {
-    display: inline-block;
+  .gallery #gallery-main-pict {
+    display: block;
   }
   .reviews__item {
     width: 478px;
@@ -1735,13 +1735,9 @@ h5 {
     margin-right: 200px;
     padding-bottom: 50px;
   }
-  .gallery {
+  .gallery__inner {
     margin-left: 110px;
     margin-right: 110px;
-    text-align: center;
-  }
-  .gallery__inner {
-    padding: 0;
   }
   .reviews__items {
     display: -ms-flexbox;

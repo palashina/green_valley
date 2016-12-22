@@ -33,17 +33,21 @@ for (var i=0; i<tabs.length; i++) {
 /*галерея на главной*/
 
 $('#gallery-thumbs').owlCarousel({
-  items:3,
-  loop:true,
-  center:true,
-  responsive: {
-    768: {
-      items:4,
-    },
-    1200: {
-      items:5,
-    },
-  },
+  items: 6,
+  loop: true,
+  center: true,
+  autoPlay:3000,
+  margin: 0,
+  // responsive: {
+  //   0: {
+  //     items: 1,
+  //     center: true
+  //   },
+  //   768: {
+  //     items: 7,
+  //     center: true
+  //   }
+  // }
 });
 
 var mainImgUrl = $('#gallery-start-photo').attr('href');

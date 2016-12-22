@@ -1,13 +1,13 @@
 $(document).ready( function() {
 
-/*выпадающее меню моб.+планш.*/
+/*главная: гамбургер*/
 
 $('.main-nav__toggler-link').click(function(e) {
   e.preventDefault();
   $('.main-nav__nav').toggle();
 });
 
-/*табы, переключалка на главной*/
+/*главная: табы в промо-блоке*/
 
 var tabs = document.querySelectorAll('.rest-type-switcher__tabs .rest-type-switcher__tab-item a');
 var restType = document.querySelectorAll('.rest-type-switcher__type .rest-type-switcher__type-item');
@@ -30,7 +30,7 @@ for (var i=0; i<tabs.length; i++) {
   tabs[i].addEventListener('click', changeTab);
 };
 
-/*галерея на главной*/
+/*главная: галерея*/
 
 $('#gallery-thumbs').owlCarousel({
   items: 6,
@@ -60,38 +60,12 @@ $('#gallery-thumbs a').on('click', function(e){
   $('#gallery-main-pict').html('<img src="'+imageUrl+'" alt="" />');
 });
 
-/*попытка 1. раскрывающийся список: отзывы*/
+/*главная: отзывы, раскрывающийся список*/
 
-// $('#all-reviews').click(function(e) {
-//   e.preventDefault();
-//   $('.reviews__toggle-items').toggle(function() {
-//     $('.reviews__toggle-items').fadeIn();
-//     return false;
-//   },
-//   function() {
-//     $('.reviews__toggle-items').fadeOut();
-//     return false;
-//   });
-// });
-
-/*попытка 2. раскрывающийся список: отзывы*/
-// $('#all-reviews').on('click', function(e){
-//   e.preventDefault();
-//   if ($('.reviews__animated').hasClass('reviews__toggle-items')){
-//     $('.reviews__animated').addClass('fadeInUp');
-//     $('.reviews__animated').removeClass('reviews__toggle-items fadeOutDown');
-//     $(this).text('Скрыть');
-//   } else {
-//     $('.reviews__animated').removeClass('fadeInUp');
-//     $('.reviews__animated').addClass('fadeOutDown');
-//     setTimeout(
-//       function(){
-//         $('.reviews__animated').addClass('reviews__toggle-items');
-//       }, 500);
-//     $(this).text('Все отзывы');
-//   }
-
-// });
+$('#all-reviews').click(function(e) {
+  e.preventDefault();
+  $('.reviews__toggle-items').slideToggle(800);
+});
 
 /*календарь*/
     var
@@ -122,8 +96,6 @@ $('#gallery-thumbs a').on('click', function(e){
 
       return date;
     }
-
-
 });
 
 

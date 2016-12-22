@@ -14,6 +14,22 @@
 			margin: 0 20px;
 		}
 
+		/*шаг 2*/
+
+		&__place-types {
+			position: relative;
+		}
+
+		&__place-types:after {
+			position: absolute;
+			content: '';
+			width: 1px;
+			height: 130px;
+			background-color: @grey-cold-cream;
+			right: 1px;
+			left: 50%;
+		}
+
 		/*шаг 3*/
 
 		&__cottage-types {
@@ -34,8 +50,19 @@
 			content: '';
 			width: 1px;
 			height: 90px;
-			color: @grey-cold-cream;
-			right: 20px;
+			background-color: @grey-cold-cream;
+			right: 1px;
+			bottom: -45px;
+		}
+
+		&__cottage-type:last-child:after {
+			position: absolute;
+			content: '';
+			width: 1px;
+			height: 90px;
+			background-color: transparent;
+			right: 1px;
+			bottom: -45px;
 		}
 
 		&__cottage-type--active:before {
@@ -197,11 +224,21 @@
 		/*шаг 1*/
 
 		&__calendar {
+			position: relative;
 			width: 500px;
 			margin: 0 auto;
 			padding: 50px 40px;
 			background-color: @white;
 			border: 1px solid @grey-lighten;
+		}
+
+		&__calendar:after {
+			position: absolute;
+			content: '';
+			width: 1px;
+			height: 130px;
+			background-color: @grey-cold-cream;
+			bottom: 30px;
 		}
 
 		&__calendar-title {
@@ -231,6 +268,26 @@
 			width: 800px;
 			margin: 0 auto;
 			margin-top: 35px;
+		}
+
+		&__pay-now-flex &__pseudo {
+			position: relative;
+		}
+
+		&__pay-now-flex &__pseudo:after {
+			content: '?';
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+			display: block;
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			background-color: @black;
+			border-radius: 50px;
+			bottom: 81px;
+			left: 120px;
 		}
 
 	}

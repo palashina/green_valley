@@ -1514,7 +1514,7 @@ h5 {
     padding: 0;
     text-align: center;
   }
-  .booking-form {/*шаг 1*//*шаг 3*//*шаг 4*//*шаг 5*/
+  .booking-form {/*шаг 1*//*шаг 2*//*шаг 3*//*шаг 4*//*шаг 5*/
   }
   .booking-form__calendar {
     display: -ms-flexbox;
@@ -1525,6 +1525,18 @@ h5 {
   }
   .booking-form__calendar-title {
     margin: 0 20px;
+  }
+  .booking-form__place-types {
+    position: relative;
+  }
+  .booking-form__place-types:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 130px;
+    background-color: #f1f1f1;
+    right: 1px;
+    left: 50%;
   }
   .booking-form__cottage-types {
     -ms-flex-direction: row;
@@ -1544,8 +1556,18 @@ h5 {
     content: '';
     width: 1px;
     height: 90px;
-    color: #f1f1f1;
-    right: 20px;
+    background-color: #f1f1f1;
+    right: 1px;
+    bottom: -45px;
+  }
+  .booking-form__cottage-type:last-child:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 90px;
+    background-color: transparent;
+    right: 1px;
+    bottom: -45px;
   }
   .booking-form__cottage-type--active:before {
     left: 45%;
@@ -1882,11 +1904,20 @@ h5 {
   .booking-form {/*шаг 1*//*шаг 3*//*шаг 5*/
   }
   .booking-form__calendar {
+    position: relative;
     width: 500px;
     margin: 0 auto;
     padding: 50px 40px;
     background-color: #fff;
     border: 1px solid #ebebeb;
+  }
+  .booking-form__calendar:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 130px;
+    background-color: #f1f1f1;
+    bottom: 30px;
   }
   .booking-form__calendar-title {
     margin: 0 50px;
@@ -1907,6 +1938,24 @@ h5 {
     width: 800px;
     margin: 0 auto;
     margin-top: 35px;
+  }
+  .booking-form__pay-now-flex .booking-form__pseudo {
+    position: relative;
+  }
+  .booking-form__pay-now-flex .booking-form__pseudo:after {
+    content: '?';
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 50px;
+    bottom: 81px;
+    left: 120px;
   }
 }
 

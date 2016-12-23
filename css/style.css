@@ -1270,6 +1270,14 @@ h5 {
   padding-right: 20px;
   padding-bottom: 80px;
 }
+@media (min-width: 497px) {
+  .single-room__image {
+    width: 100%;
+  }
+  .single-room .owl-item {
+    width: 100%;
+  }
+}
 @media (min-width: 768px) {
   .page-header__contacts {
     display: none;
@@ -1475,6 +1483,12 @@ h5 {
   .room-type__link-box {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
+  }
+  .single-room #single-room__gallery {
+    width: 100%;
+  }
+  .single-room__gallery {
+    width: 100%;
   }
   .single-room__facts-items-flex {
     display: -ms-flexbox;
@@ -1890,7 +1904,10 @@ h5 {
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
   }
-  .single-room__image-box {
+  .single-room #single-room__gallery {
+    width: 50%;
+  }
+  .single-room__gallery {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
   }

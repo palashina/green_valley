@@ -1,6 +1,25 @@
 .single-room {
 
+	@media (min-width: 497px) {
+
+		&__image {
+			width: 100%;
+		}
+
+		.owl-item {
+			width: 100%;
+		}
+	}
+
 	@media (min-width: 768px) {
+
+		#single-room__gallery {
+			width: 100%;
+		}
+
+		&__gallery {
+			width: 100%;
+		}
 
 		&__facts-items-flex {
 			display: flex;
@@ -24,7 +43,11 @@
 			flex-direction: row-reverse;
 		}
 
-		&__image-box {
+		#single-room__gallery {
+			width: 50%;
+		}
+
+		&__gallery {
 			flex-basis: 50%;
 		}
 

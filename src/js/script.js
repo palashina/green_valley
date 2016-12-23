@@ -79,16 +79,15 @@ $('#discounts-thumbs').owlCarousel({
 $('#single-room__gallery').owlCarousel({
   items: 1,
   nav: true,
-  dots: false
+  loop: true,
+  dots: false,
+    responsive: {
+      497: {
+        items: 1
+      },
+    },
 });
-// $(".fancybox").fancybox();
-
-// $('#single-room__gallery').owlCarousel({
-//     items: 1,
-//     nav: true,
-//     dots: false
-//   });
-//   $(".fancybox").fancybox();
+$(".single-room__fancybox").fancybox();
 
 /*календарь*/
     var

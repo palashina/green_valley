@@ -14,7 +14,7 @@
 <!-- PAGE-HEADER -->
 <header class="page-header">
 	<div class="page-header__inner">
-		<a href="index.html" class="main-logo"><img src="img/logo-green_valley.jpg" alt="green-valley_logo"></a>
+		<a href="index.html" class="main-logo"><img src="img/logo-green_valley.jpg" alt="logo"></a>
 		<div class="main-nav">
 			<nav class="main-nav__nav">
 				<ul class="main-nav__list">
@@ -60,7 +60,7 @@
 		<legend id="choose-date-again" class="booking-form__step-title">Шаг 1</legend>
 
 		<h2 class="booking-form__title">Дата отдыха</h2>
-        <script>document.documentElement.className +='js';</script>
+		<script>document.documentElement.className +='js';</script>
 		<div class="booking-form__calendar">
 			<label for="entry-date" class="booking-form__calendar-title">Дата въезда
 				<div class="booking-form__calendar-inputs-box">
@@ -114,11 +114,12 @@
 	<div class="booking-form__step">
 		<legend class="booking-form__step-title">Шаг 3</legend>
 		<h2 class="booking-form__title">Тип коттеджа</h2>
+
 		<div class="booking-form__cottage-types">
-			<label class="booking-form__cottage-type  booking-form__cottage-type--active"><input name="cottage-type" type="radio" value="flagman" checked>флагман</label>
-			<label class="booking-form__cottage-type"><input name="cottage-type" type="radio" value="ozerny">озёрный</label>
-			<label class="booking-form__cottage-type"><input name="cottage-type" type="radio" value="portovy">портовый</label>
-			<label class="booking-form__cottage-type"><input name="cottage-type" type="radio" value="olchovka">ольховка</label>
+			<label class="booking-form__cottage-type  booking-form__cottage-type--active"><input name="cottage-type" type="radio" value="flagman" id="booking-form__cottage-type-flagman" checked>флагман</label>
+			<label class="booking-form__cottage-type"><input name="cottage-type" type="radio" value="ozerny" id="booking-form__cottage-type-ozerny">озёрный</label>
+			<label class="booking-form__cottage-type"><input name="cottage-type" type="radio" value="portovy" id="booking-form__cottage-type-portovy">портовый</label>
+			<label class="booking-form__cottage-type"><input name="cottage-type" type="radio" value="olchovka" id="booking-form__cottage-type-olchovka">ольховка</label>
 		</div>
 		<div id="flagman" class="booking-form__cottage-options  booking-form__cottage-options--active">
 			<ul class="booking-form__cottage-options-list">
@@ -129,33 +130,33 @@
 				<li class="booking-form__option-wi-fi">wi-fi</li>
 			</ul>
 		</div>
-	<div id="ozerny" class="booking-form__cottage-options">
-		<ul class="booking-form__cottage-options-list">
-			<li>Площадь 100м</li>
-			<li>3 комнаты</li>
-			<li>5 спальных мест</li>
-			<li>раздельный санузел</li>
-			<li>wi-fi</li>
-		</ul>
-	</div>
-	<div id="portovy" class="booking-form__cottage-options">
-		<ul class="booking-form__cottage-options-list">
-			<li>Площадь 100м</li>
-			<li>3 комнаты</li>
-			<li>5 спальных мест</li>
-			<li>раздельный санузел</li>
-			<li>wi-fi</li>
-		</ul>
-	</div>
-	<div id="olchovka" class="booking-form__cottage-options">
-		<ul class="booking-form__cottage-options-list">
-			<li>Площадь 100м</li>
-			<li>3 комнаты</li>
-			<li>5 спальных мест</li>
-			<li>раздельный санузел</li>
-			<li>wi-fi</li>
-		</ul>
-	</div>
+		<div id="ozerny" class="booking-form__cottage-options">
+			<ul class="booking-form__cottage-options-list">
+				<li class="booking-form__option-square">Площадь<br>100м&#178;</li>
+				<li class="booking-form__option-door">3 комнаты</li>
+				<li class="booking-form__option-bed">5 спальных<br>мест</li>
+				<li class="booking-form__option-bathroom">раздельный<br>санузел</li>
+				<li class="booking-form__option-wi-fi">wi-fi</li>
+			</ul>
+		</div>
+		<div id="portovy" class="booking-form__cottage-options">
+			<ul class="booking-form__cottage-options-list">
+				<li class="booking-form__option-square">Площадь<br>100м&#178;</li>
+				<li class="booking-form__option-door">3 комнаты</li>
+				<li class="booking-form__option-bed">5 спальных<br>мест</li>
+				<li class="booking-form__option-bathroom">раздельный<br>санузел</li>
+				<li class="booking-form__option-wi-fi">wi-fi</li>
+			</ul>
+		</div>
+		<div id="olchovka" class="booking-form__cottage-options">
+			<ul class="booking-form__cottage-options-list">
+				<li class="booking-form__option-square">Площадь<br>100м&#178;</li>
+				<li class="booking-form__option-door">3 комнаты</li>
+				<li class="booking-form__option-bed">5 спальных<br>мест</li>
+				<li class="booking-form__option-bathroom">раздельный<br>санузел</li>
+				<li class="booking-form__option-wi-fi">wi-fi</li>
+			</ul>
+		</div>
 	</div>
 <!-- /STEP-THREE -->
 <!-- STEP-FOUR -->
@@ -239,7 +240,7 @@
 	<div class="page-footer__inner">
 		<p class="page-footer__address">г. Санкт-Петербург, Приморское ш.600</p>
 		<div class="page-footer__all-icons">
-			 <a href="index.html" class="main-logo"><img src="img/logo-green_valley.jpg" alt="green-valley_logo"></a>
+			 <a href="index.html" class="main-logo"><img src="img/logo-green_valley.jpg" alt="logo"></a>
 			 <div class="page-footer__social-links">
 				 <a href="#" class="page-footer__link"><img src="img/vk-footer.png" alt="vkontakte"></a>
 				 <a href="#" class="page-footer__link"><img src="img/insta-footer.png" alt="instagram"></a>
@@ -255,6 +256,5 @@
 <!-- /PAGE-FOOTER -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
-
 <script src="js/script.min.js"></script>
 </html>

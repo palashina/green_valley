@@ -89,7 +89,24 @@ $('#single-room__gallery').owlCarousel({
 });
 $(".single-room__fancybox").fancybox();
 
-/*календарь*/
+/*форма: переключалка опций номера*/
+$('.booking-form__cottage-type').on('change', function(){
+  $('.booking-form__cottage-options').removeClass('booking-form__cottage-options--active');
+  if($('#booking-form__cottage-type-flagman').prop("checked")){
+    $('#flagman').addClass('booking-form__cottage-options--active');
+  }
+  if($('#booking-form__cottage-type-ozerny').prop("checked")){
+    $('#ozerny').addClass('booking-form__cottage-options--active');
+  }
+  if($('#booking-form__cottage-type-portovy').prop("checked")){
+    $('#portovy').addClass('booking-form__cottage-options--active');
+  }
+  if($('#booking-form__cottage-type-olchovka').prop("checked")){
+    $('#olchovka').addClass('booking-form__cottage-options--active');
+  }
+});
+
+/*форма: календарь*/
     var
       from = $( "#calendar-start" ).datepicker()
         .on( "change", function() {
